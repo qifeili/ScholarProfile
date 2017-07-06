@@ -1,0 +1,5777 @@
+@charset "utf-8";
+
+/*公共样式*/
+body {
+    background: #eaeaea none repeat scroll 0 0;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+    /*overflow-x: hidden;*/
+}
+
+.page-header {
+    border-bottom: 1px solid #cccccc;
+    font-size: 18px;
+}
+
+/*防止导航切换*/
+.nav>li {
+    position: relative;
+    float: left;
+}
+.navbar-header {
+    float: left;
+}
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*导航条开始----------------------------*/
+.navbar-inverse {
+    background: #2c84cc none repeat scroll 0 0;
+    border: none;
+}
+
+.navbar-brand {
+    font-size: 18px !important;
+    float: left;
+    height: 50px;
+    padding: 15px 10px;
+
+}
+
+.navbar-inverse a {
+    color: white !important;
+    font-size: 15px;
+}
+.navbar-inverse a:hover {
+    background: #2e9ceb !important;
+}
+.navbar-inverse a.active {
+    background: #27649c;
+}
+.navbar-inverse a.active:hover {
+    background: #27649c !important;
+}
+.navbar-nav {
+    width: 991px;
+    float: left;
+    margin: 0;
+    position: relative;
+}
+.navbar-nav .floatLelt {
+    float: right;
+}
+
+/*用户菜单下拉菜单*/
+.navbar-nav > li.Account{
+
+}
+
+.navbar-nav > li.Account .AccountMenuList{
+    display:none;
+    background: #2e9ceb none repeat scroll 0 0;
+    cursor: auto;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 100px;
+    text-align:center;
+}
+.navbar-nav > li.Account:hover .AccountMenuList{
+    display:block;
+}
+
+
+.navbar-nav > li.Account:hover a{
+    background:#2e9ceb;
+}
+.navbar-nav > li.Account .AccountMenuList .AccountMenuListItem{
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    font-size: 12px;
+    padding: 4px;
+    position: relative;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.navbar-nav > li.Account .AccountMenuList .AccountMenuListItem:hover{
+    background:#eeeeee none repeat scroll 0 0;
+}
+.navbar-nav > li.Account .AccountMenuList .AccountMenuListItem:hover a{
+    background: #eeeeee
+}
+.navbar-nav > li.Account .AccountMenuList .AccountMenuListItem a{
+    color: black !important;
+    background:white;
+}
+
+.navbar-nav > li.Account .AccountMenuList .AccountMenuListItem a:hover{
+    background: #eeeeee !important;
+}
+
+
+
+
+
+
+
+/*动态搜索框开始*/
+
+.searchGroupWraper {
+    position: absolute !important;
+    height: 35px;
+    left: 290px;
+    top: 7px;
+    /*width:400px;*/
+}
+
+.searchGroupWraper .searchGroupClose {
+    height: 35px;
+    position: absolute;
+    top: 0;
+    display: none;
+    left: -50px;
+    z-index: 10;
+    background: red;
+    line-height: 40px;
+    text-align: center;
+    width: 50px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0) url("../images/icon-close.png") no-repeat scroll center center;
+    font-size: 0;
+}
+
+.searchGroupWraper .searchGroup {
+    width: 200px;
+    height: 35px;
+    position: absolute;
+}
+
+.searchGroupWraper .searchGroup .searchGroupCon {
+    width: 200%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.searchGroupWraper .searchGroup .searchGroupCon input {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+    border: none;
+    background-color: #dcdcdc;
+
+}
+.searchGroupWraper .searchGroup .searchGroupCon input:focus {
+    outline: none;
+}
+
+.searchGroupWraper .searchGroup .searchGroupCon .searchInput01 {
+    width: 150px;
+    padding-left: 30px;
+    background: #dcdcdc url("../images/icon-submit.png") no-repeat scroll 5px center;
+    border-right: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.searchGroupWraper .searchGroup .searchGroupCon .searchInput02 {
+    display: none;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.searchGroupWraper .searchGroupSubmit {
+    /*background:blue;*/
+    height: 35px;
+    line-height: 40px;
+    position: absolute;
+    right: -50px;
+    text-align: center;
+    width: 50px;
+    display: none;
+    border: 1px solid #ccc;
+    z-index: 10;
+    background: #fff url("../images/icon-submit.gif") no-repeat scroll center center;
+    font-size: 0;
+    border-bottom: none;
+    border-top: none;
+    border-radius: 0 3px 3px 0px;
+
+}
+.searchGroupWraper .searchInput02Wraper {
+
+}
+
+.searchGroupWraper .searchInput02Wraper .searchGroupMenu {
+    background: #e9e9e9;
+    left: 272px;
+    position: absolute;
+    top: 35px;
+    width: 272px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 5px 5px 10px #5b5b5b;
+    display: none;
+    z-index: 100;
+
+}
+
+.searchGroupWraper .searchInput02Wraper .searchGroupMenu li {
+    padding: 5px 5px 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.searchGroupWraper .searchInput02Wraper .searchGroupMenu li:first-child {
+}
+/*动态搜索框结束*/
+
+
+
+
+/*消息提示框开始*/
+.nav li.message {
+    position: relative;
+}
+.nav li.message i {
+    font-size: 15px;
+}
+.nav li.message .messageList {
+    position: absolute;
+    right: -55px;
+    width: 330px;
+    top: 50px;
+    background: #2e9ceb none repeat scroll 0 0;
+    padding: 0 4px 4px;
+    cursor: auto;
+    display:none;
+}
+.nav li.message:hover .messageList {
+    display: block;
+}
+.nav li.message:hover>a {
+    background: #2e9ceb;
+}
+
+.nav li.message .messageList .title {
+    display: block;
+    font-size: 15px;
+    margin: 8px;
+
+}
+
+.nav li.message .messageList .messageListItem {
+    background: #FFF none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    padding: 10px 4px 10px 10px;
+    word-break: break-all;
+    /*支持IE，chrome，FF不支持*/
+    word-wrap: break-word;
+    /*支持IE，chrome，FF*/
+    position: relative;
+    font-size: 12px;
+}
+
+.nav li.message .messageList .messageListItem:hover {
+    background: #eeeeee none repeat scroll 0 0;
+}
+
+.nav li.message .messageList .messageListItem .time {
+    bottom: 0;
+    color: #999999;
+    position: absolute;
+    right: 8px;
+
+}
+
+/*消息提示框结束*/
+
+
+
+
+/*导航条结束----------------------------*/
+
+
+/*弹出注册框开始------------------------------------------------------------*/
+
+#signMask {
+    background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 100%;
+    z-index: 1999;
+    display: none;
+
+}
+
+#signCon {
+    padding-top: 10px;
+    background: white;
+    width: 322px;
+    left: 50%;
+    position: fixed;
+    top: 25%;
+    z-index: 2000;
+    border-radius: 3px;
+    display:none;
+    
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    margin-left: -161px;
+    min-height:250px;
+
+}
+
+
+
+#signCon .signConColseBtn {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    cursor: pointer;
+
+}
+
+
+#signCon #signConTab {
+    margin: 13px 0;
+    width: 320px;
+}
+#signCon #signConTab .tabBtnGro {
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    width: 100%;
+
+}
+#signCon #signConTab .tabBtnGro .tabBtn {
+    float: left;
+    width: 40%;
+    /*background:#ccc;*/
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: url("../images/signConTabBtn.png");
+    color: #2c84cc;
+
+}
+
+#signCon #signConTab .tabBtnGro .tabBtn:last-child {
+    background: #fff;
+    color: #000;
+}
+
+#signCon #signConTab .tabPlane {
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+
+
+#signCon #signConTab .tabPlane .signInDialog {
+    /*text-align:center;*/
+
+}
+
+#signCon #signConTab .tabPlane .signInDialog h1 {
+    font-size: 20px;
+    line-height: 25px;
+    margin: 0;
+    text-align: center;
+    font-family: "微软雅黑";
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro a {
+    display: inline-block;
+    margin-right: 29px;
+    width: 26%;
+    height: 35px;
+    background: blue;
+    line-height: 35px;
+    text-align: center;
+    padding-left: 23px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff !important;
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro a:last-child {
+    margin-right: 0;
+
+}
+
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .weixin {
+    background: #44b035 url("../images/weixin.png") no-repeat scroll center center / 34px 34px;
+
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .weixin:hover {
+    background: #50cf3f url("../images/weixin.png") no-repeat scroll center center / 34px 34px;
+
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .qq {
+    background: #436da6 url("../images/qq.png") no-repeat scroll center center / 34px 34px;
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .qq:hover {
+    background: #4c82c3 url("../images/qq.png") no-repeat scroll center center / 34px 34px;
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .weibo {
+    background: #39a5dd url("../images/weibo.png") no-repeat scroll center center / 34px 34px;
+}
+#signCon #signConTab .tabPlane .signInDialog .trilateralLogInBtnGro .weibo:hover {
+    background: #3BB3EC url("../images/weibo.png") no-repeat scroll center center / 34px 34px;
+}
+
+#signCon #signConTab .tabPlane .signInDialog .or {
+    border-bottom: 1px solid #707070;
+    position: relative;
+    text-align: center;
+    color: #707070;
+
+}
+#signCon #signConTab .tabPlane .signInDialog .or span {
+    background: #fff;
+    font-size: 17px;
+    padding: 5px 12px;
+    position: relative;
+    top: 10px;
+}
+
+#signCon #signConTab .tabPlane .signInDialog .signUpForm {
+    margin-top: 25px;
+
+}
+
+#signCon #signConTab .tabPlane .signInDialog .signUpForm input {
+    margin-bottom: 12px;
+    padding: 4px;
+    width: 100%;
+    font-size: 14px;
+
+}
+
+
+
+#signCon #signConTab .tabPlane .signInDialog .Agreement {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+#signCon #signConTab .tabPlane .signInDialog .Agreement a {
+    color: #2c84cc !important;
+}
+
+#signCon #signConTab .tabPlane .signInDialog .signUpForm input[type="submit"] {
+    background: #2776b7 none repeat scroll 0 0;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    color: #fff;
+    font-size: 16px;
+
+}
+#signCon #signConTab .tabPlane .signInDialog .signUpForm input[type="submit"]:hover {
+    background: #2c8cd4 none repeat scroll 0 0;
+
+
+}
+#signCon #signConTab .tabPlane .signInDialog .findPass{
+    text-align:center;
+}
+#signCon #signConTab .tabPlane .signInDialog .findPassBtn{
+    /*display:block;*/
+    margin:0 auto;
+    /*text-align:center;*/
+    width:auto;
+    color:#999 !important;
+}
+
+
+/*找回密码框开始*/
+
+#findPass .tabBtnGro {
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    width: 100%;
+
+}
+#findPass .tabBtnGro .tabBtn {
+    width: 40%;
+    /*background:#ccc;*/
+    height: 40px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    font-size:18px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: url("../images/signConTabBtn.png");
+    color: #2c84cc;
+    margin:0 auto;
+
+}
+
+#findPass .tabBtnGro .tabBtn:last-child {
+    background: #fff;
+    color: #000;
+}
+
+#findPass .tabPlane {
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+
+
+#findPass .tabPlane .signInDialog {
+
+}
+
+#findPass .tabPlane .signInDialog h1 {
+    font-size:15px;
+    line-height: 25px;
+    margin: 0;
+    text-align: center;
+    font-family: "微软雅黑";
+    margin-top:10px;
+}
+
+#findPass .tabPlane .signInDialog .signUpForm{
+    position:relative;
+
+}
+
+#findPass .tabPlane .signInDialog .signUpForm input{
+    margin-top:20px;
+}
+#findPass .tabPlane .signInDialog .signUpForm label[class="errorTip"] span.arrow{
+    background: rgba(0, 0, 0, 0) url("../images/formTipArrowUp.png") repeat-x scroll 0 0 / 100% auto;
+    height: 11px;
+    left: 12px;
+    position: absolute;
+    top: -7px;
+    width: 16px;
+    z-index: 10;
+
+}
+
+#findPass .tabPlane .signInDialog .signUpForm .findPassSubmit{
+    background: #2776b7 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    height: 35px;
+    padding: 4px;
+    width: 100%;
+    margin-top:20px;
+}
+
+
+
+/*找回密码框结束*/
+
+/*找回密码框开始*/
+
+#resetPass .tabBtnGro {
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    width: 100%;
+
+}
+#resetPass .tabBtnGro .tabBtn {
+    width: 40%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    font-size:18px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background: url("../images/signConTabBtn.png");
+    color: #2c84cc;
+    margin:0 auto;
+
+}
+
+#resetPass .tabBtnGro .tabBtn:last-child {
+    background: #fff;
+    color: #000;
+}
+
+#resetPass .tabPlane {
+    margin-top: 10px;
+    background: white;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+
+
+#resetPass .tabPlane .signInDialog {
+
+}
+
+#resetPass .tabPlane .signInDialog h1 {
+    font-size:15px;
+    line-height: 25px;
+    text-align: center;
+    font-family: "微软雅黑";
+    margin:10px 0 0;
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm{
+    position:relative;
+
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm input{
+    margin-top:20px;
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm input[name = 'restPassDialogNewNumInput']~.errorTip {
+    top: 90px;
+
+
+
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm .fa-eye{
+    color:#999;
+    cursor:pointer;
+    font-size:15px;
+    position:absolute;
+    right:13px;
+    top:64px;
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm .fa-eye.show{
+
+    color:#2c84cc;
+
+
+}
+#resetPass .tabPlane .signInDialog .signUpForm .resetCode{
+    position:relative;
+
+}
+#resetPass .tabPlane .signInDialog .signUpForm .resetCode .resetCodeBtn{
+    background:#e3e3e3 repeat scroll 0 0;
+    border:1px solid #ccc;
+    border-radius:0 3px 3px 0;
+    color:#999;
+    font-size: 15px;
+    height:34px;
+    padding: 4px;
+    width:100px;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+#resetPass .tabPlane .signInDialog .signUpForm .resetPassBtn{
+    background: #2776b7 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    height: 35px;
+    padding: 4px;
+    width: 100%;
+    margin-top:20px;
+}
+
+
+
+/*找回密码框结束*/
+
+/*弹出注册框结束------------------------------------------------*/
+
+
+
+
+/*表单验证开始-----------------------------------------------*/
+
+/*validata样式*/
+label[class="error"] {
+    background: white none repeat scroll 0 0;
+    border: 1px solid #2c84cc;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6px 14px;
+    margin-top: -5px;
+    color: black !important;
+}
+label[class="error"] span {
+    left: 12px;
+    position: absolute;
+    top: -7px;
+    background: rgba(0, 0, 0, 0) url("../images/formTipArrowUp.png") repeat-x scroll 0 0 / 100%;
+    width: 16px;
+    height: 11px;
+
+}
+
+label[class="errorTip"] {
+    background:white none repeat scroll 0 0;
+    border: 1px solid #2c84cc;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    padding: 6px 14px;
+    margin-top: -5px;
+    color: black !important;
+    display: none;
+    z-index: 10;
+    top:35px;
+    left: 0;
+    font-weight:700 !important;
+}
+label[class="errorTip"] span.arrow {
+    left: 12px;
+    position: absolute;
+    top: -7px;
+    background: rgba(0, 0, 0, 0) url("../images/formTipArrowUp.png") repeat-x scroll 0 0 / 100%;
+    width: 16px;
+    height: 11px;
+    z-index: 10;
+
+}
+
+/*自定义样式*/
+
+
+/*表单验证结束-----------------------------------------------*/
+
+
+/*setiingTip开始-----------------------------------------------*/
+
+.setiingTip{
+    left: 50%;
+    margin-left: -100px;
+    position: fixed;
+    text-align: center;
+    top: 50px;
+    width: 100px;
+    padding: 5px;
+    display:none;
+}
+.setiingTip.success{
+    background-color: #dff0d8;
+    border:1px solid #d6e9c6;
+    color: #3c763d;
+}
+.setiingTip.error{
+    color: #a94442;
+    background-color: #f2dede;
+    border:1px solid #ebccd1;
+}
+
+/*setiingTip结束-----------------------------------------------*/
+
+/*session过期开始-----------------------------------------------*/
+
+.sessionExpiredDia{
+    left: 50%;
+    margin-left:-200px;
+    position: fixed;
+    text-align: center;
+    top:220px;
+    width:400px;
+    padding:0;
+    background:white none repeat scroll 0 0;
+    border-radius:5px;
+    box-shadow:0px 0px 11px #000;
+    overflow:hidden;
+    z-index:1000;
+    display:none;
+}
+.sessionExpiredDia .sessionExpiredDiaColseBtn{
+    position:absolute;
+    right:8px;
+    top:6px;
+    cursor:pointer;
+    width:18px;
+
+}
+
+.sessionExpiredDia .title{
+    margin:0;
+    font-size:18px;
+    padding:5px 5px 5px 15px;
+    text-align:left;
+    background:#2c84cc;
+    color:white;
+}
+.sessionExpiredDia .content{
+    margin:0;
+    border-bottom:1px solid #ccc;
+    font-size:15px;
+    padding:15px 5px 5px 15px;
+    height:60px;
+    text-align:left;
+}
+.sessionExpiredDia .operation{
+    margin:0;
+    padding:5px;
+    font-size: 15px;;
+}
+.sessionExpiredDia .operation button{
+    display:block;
+    float:right;
+    width:auto;
+    margin-right:5px;
+    margin-top:0px;
+    font-size:12px;
+}
+
+
+
+/*session过期结束-----------------------------------------------*/
+
+
+
+/*主页*/
+.container {
+    width:1100px !important;
+    margin-left:auto;
+    padding-left:15px;
+}
+/*公共轮播图、*/
+header.carousel{
+    height: 50%;
+    min-width: 1100px;
+    width: 101%;
+}
+
+.carousel-inner .carousel01 .carousel01Img {
+    padding-top: 30px;
+
+}
+.carousel-inner .fill .overview-title {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 40px;
+
+}
+
+.carousel-inner .carousel01 .fill .data-list {
+    height: 65%;
+    margin: 0 auto;
+    width: 1100px;
+    position: relative;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Items {
+    position: absolute;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item01 {
+    top: 30%;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item02 {
+    bottom: 0px;
+    left: 155px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item03 {
+    left: 162px;
+    top: 12px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item04 {
+    bottom: 47px;
+    left: 300px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item05 {
+    left: 446px;
+    top: 20px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item06 {
+    left: 509px;
+    bottom: 10px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item07 {
+    left: 591px;
+    top: 61px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item08 {
+    left: 724px;
+    bottom: 56px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item09 {
+    left: 847px;
+    top: 2px;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item10 {
+    left: 1006px;
+    bottom: 40px;
+}
+
+.carousel-inner .carousel01 .fill .data-list .ctn {
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+/*定义动画*/
+@keyframes lightingGreen {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.carousel-inner .carousel01 .fill .data-list .po .light {
+    animation: 1.5s ease 0s normal none infinite running lightingGreen;
+    border-radius: 10px;
+}
+
+.carousel-inner .carousel01 .fill .data-list .po .dot {
+    background: #00da00;
+    height: 10px;
+    margin: -11px auto 0;
+    width: 10px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1000;
+}
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item01 .po .dot {
+    height: 8px;
+    margin-top: -10px;
+    width: 8px;
+
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item03 .po .dot {
+    height: 6px;
+    margin-top: -9px;
+    width: 6px;
+
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item05 .po .dot {
+    height: 12px;
+    margin-top: -12px;
+    width: 12px;
+
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item07 .po .dot {
+    height: 6px;
+    margin-top: -9px;
+    width: 6px;
+
+}
+
+
+
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item01 .light {
+    border: 2px solid rgba(113, 195, 137, 0.30);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item02 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item03 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item04 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+
+
+.carousel-inner .carousel01 .fill .data-list .data-list-Item05 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item06 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item07 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item08 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item09 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+.carousel-inner .carousel01 .fill .data-list .data-list-Item10 .light {
+    border: 2px solid rgba(113, 195, 137, 0.9);
+    height: 12px;
+    width: 12px;
+    margin: 0 auto;
+}
+
+
+.carousel-inner .carousel02 .fill {
+    background: #86c5f5;
+    padding-top: 30px;
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con {
+    height: 100%;
+    margin: 0 auto;
+    width: 1100px;
+
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue {
+    width: 500px;
+    padding-top: 6%;
+    float: left;
+
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak01 {
+    margin-bottom: 10px;
+    margin-top: 0px;
+
+}
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak01 .head {
+    background: url("../images/head01.jpg");
+    background-size: 100% 100%;
+    float: left;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak01 .Content {
+    background: #fbfbfb none repeat scroll 0 0;
+    float: right;
+    min-height: 60px;
+    width: 410px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak01 .Content .diarrow {
+    background: rgba(0, 0, 0, 0) url("../images/diarrow.png") no-repeat scroll 0 0;
+    height: 50px;
+    left: -16px;
+    position: absolute;
+    width: 26px;
+
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak02 .head {
+    background: url("../images/head02.jpg");
+    background-size: 100% 100%;
+    float: right;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak02 .Content {
+    background: #fbfbfb none repeat scroll 0 0;
+    float: left;
+    min-height: 60px;
+    width: 410px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con .dialogue .speak02 .Content .diarrow {
+    background: rgba(0, 0, 0, 0) url("../images/diarrow.png") no-repeat scroll 0 0;
+    height: 50px;
+    right: -16px;
+    position: absolute;
+    width: 26px;
+    transform: rotate(180deg);
+    top: -5px;
+}
+
+.carousel-inner .carousel02 .fill .carousel02Con #carousel02-Echart-line {
+    float: right;
+    z-index: 200;
+    width: 600px;
+    height: 250px;
+    margin-right: -40px;
+    margin-top: 1%;
+
+}
+
+.carousel-inner .carousel03 .fill {
+    background: rgba(255, 139, 40, 0.75) url('../images/carousel02.png') no-repeat center 40%;
+    background-size: 1300px auto;
+    padding-top: 30px;
+}
+
+
+.index .container .page-header {
+    font-size: 25px;
+    position: relative;
+}
+
+.index .container .TechnologyDis {
+    width: 750px;
+    float: left;
+}
+.index .container .TechnologyDis .TechnologyDis-row {
+    width: 100%;
+
+}
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel {
+    width: 31%;
+    float: left;
+    margin-right: 26px;
+    /*border:1px solid #ccc;*/
+    /*border-bottom:1px solid #ccc;*/
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff none repeat scroll 0 0;
+    position: relative;
+
+}
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel:last-child {
+    margin-right: 0;
+
+}
+
+/*.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel:hover{*/
+/*border-color:#2c84cc;*/
+/*}*/
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel h1 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+    background: #2c84cc;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    color: #fff;
+    border-bottom: 1px solid #ccc;
+
+}
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel .more {
+    color:#ccc !important;
+    font-size: 15px;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+    cursor: pointer;
+}
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel .more:hover {
+    
+    color: #FFF !important;
+
+}
+
+
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel dt a {
+    font-size: 15px;
+    margin: 0;
+    padding-left: 15px;
+    font-family: 微软雅黑;
+    font-weight: lighter;
+    color: #2c84cc !important;
+
+}
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel dt a:hover {
+    
+    color: #ff5837 !important;
+
+}
+
+.index .container .TechnologyDis .TechnologyDis-row .TechnologyDisPanel dd {
+    font-size: 13px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+    padding-left: 15px;
+
+}
+
+.index .container .siderDis {
+    width: 302px;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.index .container .siderDis .signUp {
+    background:#fff;
+    margin-bottom:10px;
+    padding:10px;
+
+}
+
+.index .container .siderDis .signUp h1 {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    text-align: center;
+    font-family: "微软雅黑";
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.index .container .siderDis .signUp .trilateralLogInBtnGro a {
+    display: inline-block;
+    margin-right:25px;
+    width: 26%;
+    height: 35px;
+    background: blue;
+    line-height: 35px;
+    text-align: center;
+    padding-left: 23px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff !important;
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro a:last-child {
+    margin-right: 0;
+
+}
+
+.index .container .siderDis .signUp .trilateralLogInBtnGro .weixin {
+    background: #44b035 url("../images/weixin.png") no-repeat scroll center center / 34px 34px;
+
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro .weixin:hover {
+    background: #52d741 url("../images/weixin.png") no-repeat scroll center center / 34px 34px;
+
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro .qq {
+    background: #436da6 url("../images/qq.png") no-repeat scroll center center / 34px 34px;
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro .qq:hover {
+    background: #538ad0 url("../images/qq.png") no-repeat scroll center center / 34px 34px;
+}
+.index .container .siderDis .signUp .trilateralLogInBtnGro .weibo {
+    background: #389fd7 url("../images/weibo.png") no-repeat scroll center center / 34px 34px;
+}
+
+.index .container .siderDis .signUp .trilateralLogInBtnGro .weibo:hover {
+    background: #3BB3EC url("../images/weibo.png") no-repeat scroll center center / 34px 34px;
+}
+
+.index .container .siderDis .signUp .or {
+    border-bottom: 1px solid #707070;
+    position: relative;
+    text-align: center;
+    color: #707070;
+
+}
+.index .container .siderDis .signUp .or span {
+    background: #fff;
+    font-size: 17px;
+    padding: 5px 12px;
+    position: relative;
+    top: 10px;
+}
+
+.index .container .siderDis .signUp .signUpForm {
+    margin-top: 25px;
+
+}
+
+.index .container .siderDis .signUp .signUpForm input {
+    margin-bottom: 12px;
+    padding: 4px;
+    width: 100%;
+
+}
+
+
+
+.index .container .siderDis .signUp .Agreement {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.index .container .siderDis .signUp .Agreement a {
+    color: #2c84cc !important;
+}
+
+.index .container .siderDis .signUp .signUpForm input[type="submit"] {
+    background: #2776b7 none repeat scroll 0 0;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    color: #fff;
+    font-size: 15px;
+
+}
+
+.index .container .siderDis .signUp .signUpForm input[type="submit"]:hover {
+    background: #2c8cd4 none repeat scroll 0 0;
+}
+
+
+
+.index .container .interest {
+    /*width: 300px;*/
+    /*float: right;*/
+    padding: 10px;
+    background: #fff;
+}
+.index .container .interest h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 15px;
+    margin-bottom: 10px;
+}
+
+
+.index .container .interest .jobLikeList {
+}
+.index .container .interest .jobLikeList .jobLikeListItems {
+    margin-bottom: 11px;
+}
+.index .container .interest .jobLikeimg {
+    border: 1px solid #ccc;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.index .container .interest p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #9d9d9d;
+}
+
+.index .container .interest p.title {
+    color: #337ab7;
+    font-size: 15px;
+
+}
+.index .container .interest p.title a {
+    color: #2c84cc !important;
+}
+.index .container .interest p.title a:hover {
+    color: #ff5837 !important;
+}
+
+.index .container .lastProjedt {
+    width: 730px;
+
+}
+.index .container .lastProjedt .more {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    margin-top: 12px;
+
+}
+
+.index .container .lastProjedt .more a {
+    color: #8f8f8f !important;
+
+}
+.index .container .lastProjedt .more a:hover {
+    color: #fff !important;
+
+}
+
+
+.index .container .projectListCon {
+    margin: 0;
+    border: none;
+}
+.index .container .projectListItem {
+    background: #fff none repeat scroll 0 0;
+    /*-moz-border-right-colors:none;*/
+    padding: 10px;
+    border: 1px none #ccc;
+    border-top-style: solid;
+    width: 750px;
+}
+
+/*.index .container  .projectListItem:hover{*/
+/*border:1px solid #2c84cc;*/
+/*}*/
+
+.index .container a:last-child .projectListItem {
+    border-bottom: 1px solid #ccc;
+}
+
+/*.index .container  a:last-child .projectListItem:hover{*/
+/*border-bottom:1px solid #2c84cc;*/
+/*}*/
+
+.index .container .projectListItem .projectListItem-column {
+    float: left;
+    margin-right: 5%;
+    height: 61px;
+
+}
+
+.index .container .projectListItem .projectListItem-column h1 {
+    color: #2c84cc;
+    font-size: 18px;
+    margin: 0 20px 10px 0;
+}
+.index .container .projectListItem .projectListItem-column h1 a {
+    color: #2c84cc !important;
+}
+.index .container .projectListItem .projectListItem-column h1 a:hover {
+    color: #ff5837 !important;
+}
+
+.index .container .projectListItem .projectListItem-column h2 {
+    color: #fff;
+    font-size: 15px;
+    background: orange;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 1px;
+    padding: 5px;
+}
+.index .container .projectListItem .projectListItem-column p {
+    color: #818181;
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.index .container .projectListItem .projectListItem-column:first-child {
+    width: 65%;
+}
+.index .container .projectListItem .projectListItem-column:first-child .companyLogo {
+    border: 1px solid #ccc;
+    float: left;
+    height: 100%;
+    margin-right: 15px;
+
+}
+
+.index .container .projectListItem .projectListItem-column:nth-child(2) {
+    width: 20%;
+    font-size: 18px;
+    color: orange;
+}
+.index .container .projectListItem .projectListItem-column:last-child {
+    margin-right: 0;
+    width: 5%;
+    font-size: 23px;
+    color: #2c84cc;
+}
+
+
+.index .container .enterPriseDis {
+    margin-top: 15px;
+
+}
+
+.index .container .enterPriseDis .enterPriseDis-row {
+
+}
+
+.index .container .enterPriseDis .enterPriseDisPanel {
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.10);
+
+}
+/*.index .container .enterPriseDis .enterPriseDisPanel:hover{*/
+/*border:1px solid #2c84cc;*/
+/*}*/
+
+.index .container .enterPriseDis .enterPriseDisPanel:last-child {
+    margin: 0;
+}
+.index .container .enterPriseDis .enterPriseDisPanel .enterpriseDis {
+    width: 100%;
+    margin-bottom: -10px;
+}
+
+.index .container .enterPriseDis .enterPriseDisPanel .radar {
+    width: 100%;
+}
+
+.index .container .enterPriseDis .enterPriseDisPanel h2 {
+    padding-left: 15px;
+    font-size: 18px;
+
+}
+
+.topBtnGroup {
+    background: red none repeat scroll 0 0;
+    width: 60px;
+    margin: 0 auto;
+    border: 1px solid #999;
+    bottom: 80px;
+    position: fixed;
+    right: 30px;
+
+}
+.topBtnGroup li {
+    background: #fff none repeat scroll 0 0;
+    height: 60px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #999;
+
+}
+.topBtnGroup li:last-child {
+    border-bottom: 0px solid #000;
+    cursor: pointer;
+
+}
+.topBtnGroup li a:focus {
+    text-decoration: none;
+}
+
+.topBtnGroup li:last-child a {
+    display: none;
+}
+.topBtnGroup li:last-child:hover a {
+    display: block;
+
+}
+.topBtnGroup li:last-child:hover i {
+    display: none;
+
+}
+.topBtnGroup li:last-child:hover b {
+    display: none;
+
+}
+
+.topBtnGroup li.active {
+    background: #3d9ccc;
+}
+
+
+/*.topBtnGroup li:nth-child(2){
+    background:#3d9ccc;
+}*/
+
+.topBtnGroup li i {
+    border: 15px dashed transparent;
+    border-bottom: solid #ddd;
+    display: block;
+    font-size: 0;
+    height: 0px;
+    line-height: 10;
+    margin: 0 auto;
+    width: 0;
+    padding-top: 0px;
+    border-color: transparent transparent #ddd;
+    border-image: none;
+    border-style: dashed dashed solid;
+    border-width: 15px 15px;
+}
+
+.topBtnGroup li b {
+    background: #ddd none repeat scroll 0 0;
+    display: block;
+    font-size: 0;
+    height: 16px;
+    line-height: 0;
+    margin: 0 auto;
+    width: 12px;
+}
+
+
+
+
+.topBtnGroup a {
+    display: block;
+    height: 60px;
+    font-size: 15px;
+    padding: 11px;
+    text-align: center;
+    color: #999;
+    line-height: 18px;
+
+}
+.topBtnGroup a:hover {
+    color: #999 !important;
+
+}
+
+.topBtnGroup li.active a {
+    color: #fff !important;
+}
+
+footer p {
+    text-align: center
+}
+
+/*工程师列表列表页*/
+
+.engineerInfoList .container #acc {
+    box-shadow: 0 0 2px #cccccc;
+    width: 750px;
+    float: left;
+    background: #fff;
+}
+.engineerInfoList .container .siderDis {
+    width: 300px;
+    float: right;
+    height: 600px;
+    padding: 10px;
+    background: #fff;
+}
+
+.engineerInfoList .container .siderDis h1 {
+    font-family: "微软雅黑";
+    font-size: 19px;
+    line-height: 25px;
+    margin: 0 0 15px;
+    margin-bottom: 10px;
+}
+
+
+.engineerInfoList .container .siderDis .jobLikeList {
+}
+.engineerInfoList .container .siderDis .jobLikeList .jobLikeListItems {
+    margin-bottom: 11px;
+}
+.engineerInfoList .container .siderDis .jobLikeimg {
+    border: 1px solid #ccc;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.engineerInfoList .container .siderDis p {
+    font-size: 16px;
+    line-height: 18px;
+    color: #9d9d9d;
+}
+
+.engineerInfoList .container .siderDis p.title {
+    color: #337ab7;
+
+}
+
+
+.engineerInfoList .container #acc .btn {
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    border-radius: 0;
+    height: 70px;
+    padding: 0;
+    line-height: 70px;
+
+}
+
+.engineerInfoList .container #acc .btn:hover {
+    background: #e3e3e3;
+}
+
+.engineerInfoList .container #acc .btn i {
+    background-image: url("../images/info_arrow_down_icon.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px 10px;
+    float: right;
+    width: 4%;
+    height: 70px;
+    display: block;
+
+
+}
+.engineerInfoList .container #acc .btn .btnMain {
+    height: 70px;
+    width: 96%;
+    float: left;
+
+}
+
+.engineerInfoList .container #acc .plane {
+    display: none;
+    background: #f7f7f7 none repeat scroll 0 0;
+    box-shadow: inset 0 0 5px #ccc;
+    padding: 2px;
+}
+
+
+.engineerInfoList .container .tab {
+
+}
+
+.engineerInfoList .container .tab .tabBtnGro {
+    width: 20%;
+    float: left;
+    height: 100%;
+
+}
+.engineerInfoList .container .tab .tabBtnGro .tabBtn {
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.engineerInfoList .container .tab .tabBtnGro .tabBtn:first-child {
+    background: #fff;
+    border-left: 5px solid #2c84cc;
+}
+.engineerInfoList .container .tab .tabBtnGro .tabBtn:hover {
+    background: #ffffff !important;
+}
+.engineerInfoList .container .tab .tabPlane {
+    float: left;
+    width: 80%;
+    background: #fff;
+    min-height: 150px;
+}
+
+/*公司列表页*/
+
+
+.companyList .banner {
+    background: url("../images/companyListBannerBg.jpg");
+    width: 1070px;
+    height: 250px;
+    margin: 20px auto 0;
+    padding-top: 65px;
+}
+
+.companyList .banner h1 {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1), 0 2px 0 rgba(0, 0, 0, 1);
+    color: white;
+    letter-spacing: 45px;
+    font-weight: bold;
+}
+
+.companyList .banner .srcBoxList {
+    height: 60px;
+    width: 600px;
+    margin: 30px auto 0;
+    position: relative;
+
+}
+
+.companyList .banner .srcBoxList .srcTypeWraper {
+    background: red;
+    float: left;
+    width: 17%;
+
+}
+
+.companyList .banner .srcBoxList .srcTypeWraper:hover .srcType {
+    background: #fff url("../images/arrow-o.png") no-repeat scroll 95% center;
+}
+
+.companyList .banner .srcBoxList .srcType {
+    /*border:none;*/
+    /*margin:0;*/
+    float: left;
+    height: 40px;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+
+
+.companyList .banner .srcBoxList .srcTypeList {
+    background: lavender;
+    position: absolute;
+    top: 40px;
+    width: 101px;
+    display: none;
+    border: 1px solid #ccc;
+    border-top: none;
+
+}
+
+.companyList .banner .srcBoxList .srcTypeList li {
+    cursor: pointer;
+    background: white;
+    padding: 5px 5px 5px 12px;
+
+}
+
+.companyList .banner .srcBoxList .srcTypeList li:hover {
+    
+    background: #2e9ceb;
+
+}
+.companyList .banner .srcBoxList .srcTypeList li.active {
+    background: #2c94cc;
+}
+
+
+
+
+.companyList .banner .srcBoxList .srckey {
+    /*border:none;*/
+    /*margin:0;*/
+    width: 75%;
+    float: left;
+    height: 40px;
+    border-radius: 0px;
+    margin: 0;
+    border: none;
+}
+.companyList .banner .srcBoxList .srcSub {
+    border: medium none;
+    /*margin:0;*/
+    width: 8%;
+    height: 40px;
+    border-radius: 0;
+    background: #2c84cc;
+}
+
+.companyList .banner .srcBoxList .srcSub i {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+
+
+.companyList .banner .srcBoxList .srcType {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: solid 1px #000;*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+.companyList .banner .srcBoxList .srcType::-ms-expand {
+    display: none;
+}
+
+
+
+
+
+.companyList .container .leftCol {
+    box-shadow: 0 0 2px #cccccc;
+    width: 750px;
+    float: left;
+    background: #fff;
+}
+
+.companyList .container .leftCol .companyListCon {
+    margin: 0;
+    border: none;
+}
+.companyList .container .leftCol .companyListItem {
+    border-bottom: 1px solid #ccc;
+    background: #fff none repeat scroll 0 0;
+    padding: 20px 20px 15px;
+}
+
+.companyList .container .leftCol .companyListItem:hover {
+    /*background:#ececec;*/
+    border: 1px solid rgba(45, 164, 244, 0.84);
+}
+
+.companyList .container .leftCol .companyListItem .blurred {
+    width: 100%;
+    display: block;
+
+}
+
+.companyList .container .leftCol .companyListItem .companyWiew {
+    margin-bottom: 10px;
+
+}
+.companyList .container .leftCol .companyListItem .companyWiew .companyLogo {
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+
+}
+.companyList .container .leftCol .companyListItem .companyWiew .companyUrl {
+    float: left;
+    margin-left: 10px;
+    margin-top: 36px;
+
+}
+
+.companyList .container .leftCol .companyListItem .companyWiew .companyUrl h1 {
+    font-size: 20px;
+    margin: 15px 0 0;
+}
+.companyList .container .leftCol .companyListItem .companyWiew .companyUrl h1 a {
+    color: #2c84cc !important;
+
+}
+.companyList .container .leftCol .companyListItem .companyWiew .companyUrl h1 a:hover {
+    color: #ff5837 !important;
+
+}
+
+
+
+.companyList .container .leftCol .companyListItem .companyWiew .companyUrl p {
+    color: #999;
+    margin-top: 4px;
+    font-size: 14px;
+
+}
+.companyList .container .leftCol .companyListItem .companyWiew .review {
+    float: right;
+    background: #2c84cc;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 55px;
+    padding: 8px 20px;
+    letter-spacing: 3px;
+
+}
+.companyList .container .leftCol .companyListItem .companyWiew .review:hover {
+    background: #296fae;
+}
+
+.companyList .container .leftCol .companyListItem .commentBox ul {
+    float: left;
+}
+.companyList .container .leftCol .companyListItem .commentBox ul li {
+    float: right;
+    height: 55px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-right: 1px solid #ccc;
+
+}
+.companyList .container .leftCol .companyListItem .commentBox ul li:hover {
+    background: #f2f2f2;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.companyList .container .leftCol .companyListItem .commentBox ul a:last-child li {
+    border-left: 1px solid #ccc;
+}
+.companyList .container .leftCol .companyListItem .commentBox ul li i {
+    display: block;
+    text-align: center;
+    font-style: normal;
+}
+.companyList .container .leftCol .companyListItem .commentBox ul li b {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    font-weight: 100;
+    color: #2c84cc;
+    font-family: 微软雅黑;
+    margin-top: 5px;
+}
+
+.companyList .container .leftCol .companyListItem .commentBox .gade {
+    float: right;
+    height: 55px;
+    width: 400px;
+}
+
+.companyList .container .leftCol .companyListItem .commentBox .gade i {
+    color: #2c84cc;
+    /*border:1px solid black;*/
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 55px;
+    float: right;
+    margin-right: 10px;
+
+}
+
+
+.companyList .container .siderDis {
+    width: 300px;
+    float: right;
+    padding: 10px;
+    background: #fff;
+}
+.companyList .container .siderDis h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 15px;
+    margin-bottom: 10px;
+}
+
+
+.companyList .container .siderDis .jobLikeList {
+}
+.companyList .container .siderDis .jobLikeList .jobLikeListItems {
+    margin-bottom: 11px;
+}
+.companyList .container .siderDis .jobLikeimg {
+    border: 1px solid #ccc;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.companyList .container .siderDis p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #9d9d9d;
+}
+
+.companyList .container .siderDis p.title {
+    color: #337ab7;
+    font-size: 15px;
+
+}
+.companyList .container .siderDis p.title a {
+    color: #2c84cc !important;
+}
+.companyList .container .siderDis p.title a:hover {
+    color: #ff5837 !important;
+}
+
+.companyList .container .leftCol .paginationWraper {
+    width: 570px;
+    margin: 0 auto;
+    padding: 30px 0px;
+    color: #000;
+    text-align:center;
+
+}
+
+.companyList .container .leftCol .paginationWraper .pagination {
+    margin: 0;
+    /*float:left;*/
+}
+.companyList .container .leftCol .paginationWraper .justPage {
+    width: 31px;
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+}
+.companyList .container .leftCol .paginationWraper .submit {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+    background: #fff;
+}
+.companyList .container .leftCol .paginationWraper .pagination li a.active {
+    background: #2c84cc;
+
+}
+
+/*公司详情页*/
+
+
+.companyInfo .banner {
+    width: 1070px;
+    height: 306px;
+    margin: 20px auto 15px;
+    background: white;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.companyInfo .banner .bannerTopImg {
+    width: 100%;
+    display: block;
+    height: 185px;
+}
+
+.companyInfo .banner .companyWiew {
+    margin-top: -10px;
+
+}
+.companyInfo .banner .companyWiew .companyLogo {
+    float: left;
+    position: relative;
+    top: -40px;
+    margin-left: 15px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+
+}
+.companyInfo .banner .companyWiew .companyUrl {
+    float: left;
+    margin-left: 10px;
+
+}
+.companyInfo .banner .companyWiew .companyUrl h1 {
+    font-size: 25px;
+    margin: 15px 0px 0px;
+    color: #2c84cc;
+
+}
+.companyInfo .banner .companyWiew .companyUrl p {
+    color: #999;
+    margin-top: 2px;
+
+}
+
+
+.companyInfo .banner .commentBox {
+    position: relative;
+    top: -30px;
+
+}
+.companyInfo .banner .commentBox ul {
+    float: left;
+}
+.companyInfo .banner .commentBox ul li {
+    float: right;
+    height: 55px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border-right: 1px solid #ccc;
+    padding-bottom: 53px;
+    border-bottom: 3px solid #FFF;
+
+}
+.companyInfo .banner .commentBox ul li:hover {
+    background: #f2f2f2;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    border-bottom: 3px solid #2c94cc;
+}
+
+.companyInfo .banner .commentBox ul a:last-child li {
+    margin-left: 15px;
+    border-bottom: 3px solid #2c94cc;
+}
+.companyInfo .banner .commentBox ul a:first-child li {
+    border-right: none;
+}
+.companyInfo .banner .commentBox ul li i {
+    display: block;
+    text-align: center;
+    font-style: normal;
+}
+.companyInfo .banner .commentBox ul li b {
+    display: block;
+    text-align: center;
+    line-height: 10px;
+    font-weight: 100;
+    color: #2c84cc;
+    font-family: 微软雅黑;
+    margin-top: 5px;
+}
+
+.companyInfo .banner .commentBox .btnGro {
+    float: right;
+    height: 55px;
+    width: 400px;
+}
+.companyInfo .banner .commentBox .btnGro button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.companyInfo .banner .commentBox .btnGro i.focus {
+    color: #2c94cc;
+    cursor: pointer;
+    font-size: 25px;
+    line-height: 75px;
+    margin-left: 20px;
+    float: right;
+    margin-right: 25px;
+
+}
+.companyInfo .container .leftCol {
+    width: 750px;
+    float: left;
+}
+.companyInfo .container .leftCol .disTitle {
+    border-bottom: 1px solid #ccc;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-top: 0;
+    color: #2c84cc;
+
+}
+.companyInfo .container .leftCol .echartsBox {
+    background: #fff;
+    padding: 25px;
+
+}
+
+.companyInfo .container .leftCol .echartsBox .echartPie {
+    float: left;
+    border-right: 1px solid #ccc;
+
+}
+.companyInfo .container .leftCol .echartsBox .echartline {
+    float: left;
+
+}
+
+.companyInfo .container .leftCol .result {
+    background: #fff;
+    padding: 25px;
+    margin-top: 15px;
+
+}
+
+.companyInfo .container .leftCol .result .resultItem {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-indent: 10px;
+}
+
+.companyInfo .container .leftCol .Paper {
+    background: #fff;
+    padding: 25px;
+    margin-top: 15px;
+
+}
+
+.companyInfo .container .leftCol .Paper .resultItem {
+    font-size: 15px;
+    margin-bottom: 5px;
+    text-indent: 10px;
+}
+
+
+
+
+
+
+
+.companyInfo .container .siderDis {
+    width: 300px;
+    float: right;
+    padding: 10px;
+    background: #fff;
+}
+.companyInfo .container .siderDis h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 10px;
+}
+
+.companyInfo .container .siderDis .tags li:nth-child(3n+1) a {
+    color: #2f9ef0 !important;
+    font-weight: 100;
+}
+
+.companyInfo .container .siderDis .tags li:nth-child(3n+2) a {
+    color: #cd9d2e !important;
+    font-weight: 900;
+}
+
+.companyInfo .container .siderDis .tags li:nth-child(3n+3) a {
+    color: #52d741 !important;
+    font-weight: bolder;
+}
+
+
+/*注册页01*/
+.registerStep01 .container .page-header {
+    width: 100%;
+}
+
+.registerStep01 .container .stepNav {
+    margin: 0 auto;
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+
+}
+.registerStep01 .container .stepNav .stepNavList {
+}
+.registerStep01 .container .stepNav .stepNavList .stepNavListItem {
+    background: #2c84cc;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    color: #FFF;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+}
+.registerStep01 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    background: #e3e3e3 none repeat scroll 0 0;
+    color: #ccc;
+}
+.registerStep01 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+
+}
+.registerStep01 .container .stepNav .stepNavList .stepNavListItem:first-child {
+    float: left;
+}
+.registerStep01 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    float: right;
+}
+
+.registerStep01 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.registerStep01 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+
+}
+.registerStep01 .container .registerCon h2 {
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.registerStep01 .container .registerCon form {
+    width: 350px;
+    margin: 26px auto 0;
+
+}
+
+.registerStep01 .container .registerCon form .formList {
+}
+.registerStep01 .container .registerCon form .formList .formListItems {
+    position: relative;
+}
+
+.registerStep01 .container .registerCon form select {
+    color: #999;
+    padding-left: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: solid 1px #000;*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+
+.registerStep01 .container .registerCon form select::-ms-expand {
+    display: none;
+}
+
+
+.registerStep01 .container .registerCon form .realName {
+}
+
+.registerStep01 .container .registerCon form .bornDate {
+    width: 70%;
+    float: left;
+
+}
+.registerStep01 .container .registerCon form .sex {
+    width: 20%;
+    float: right;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 72% center;
+}
+.registerStep01 .container .registerCon form .diploma {
+
+}
+.registerStep01 .container .registerCon form .startWork {
+
+}
+.registerStep01 .container .registerCon form .workAdd {
+}
+.registerStep01 .container .registerCon form .continue {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom:15px;
+}
+.registerStep01 .container .registerCon form a {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+
+}
+.registerStep01 .container .registerCon form input,select,button {
+    margin-bottom:17px;
+}
+
+
+/*注册页02*/
+.registerStep02 .container .page-header {
+    width: 100%;
+}
+
+.registerStep02 .container .stepNav {
+    margin: 0 auto;
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+
+}
+.registerStep02 .container .stepNav .stepNavList {
+}
+.registerStep02 .container .stepNav .stepNavList .stepNavListItem {
+    background: #2c84cc none repeat scroll 0 0;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    color: #FFF;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+}
+/*.registerStep02 .container .stepNav .stepNavList .stepNavListItem:first-child{
+    background:#e3e3e3 none repeat scroll 0 0;
+    color:#ccc;
+}*/
+.registerStep02 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+
+}
+.registerStep02 .container .stepNav .stepNavList .stepNavListItem:first-child {
+    float: left;
+}
+.registerStep02 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    float: right;
+}
+
+.registerStep02 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding: 20px 0;
+}
+
+.registerStep02 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 20px;
+
+}
+.registerStep02 .container .registerCon h2 {
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.registerStep02 .container .registerCon form {
+    width: 350px;
+    margin: 26px auto 0;
+
+}
+
+.registerStep02 .container .registerCon form .formList {
+
+}
+.registerStep02 .container .registerCon form .formList .formListItems {
+    position: relative;
+    margin: 0;
+}
+
+.registerStep02 .container .registerCon form select {
+    color: #999;
+    padding-left: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: solid 1px #000;*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+
+
+.registerStep02 .container .registerCon form select::-ms-expand {
+    display: none;
+}
+
+
+
+
+.registerStep02 .container .registerCon form .submit {
+    font-size: 15px;
+    font-weight: bold;
+}
+.registerStep02 .container .registerCon form a {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+
+}
+.registerStep02 .container .registerCon form * {
+    margin-bottom: 15px;
+    margin-bottom: 15px;
+    margin-bottom: 15px;
+
+}
+
+/*自动完成text开始*/
+.registerStep02 .container .registerCon .autoComplete {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+.registerStep02 .container .registerCon .autoComplete-downBtn {
+    border: none;
+    height: 34px;
+    position: absolute;
+    right: 3px;
+    top: 1px;
+    width: 30px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll center center;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.registerStep02 .container .registerCon .autoComplete-input {
+    height: 36px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 48px;
+    margin-bottom: 0;
+}
+
+
+.registerStep02 .container .registerCon .autoComplete-list {
+    background: #fff none repeat scroll 0 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    top: 35px;
+    display: none;
+    z-index: 100;
+}
+
+.registerStep02 .container .registerCon .autoComplete-list li {
+    cursor: pointer;
+    padding: 6px 3px 6px 10px;
+    padding-left: 10px;
+    margin: 0;
+}
+
+.registerStep02 .container .registerCon .autoComplete-list li:hover {
+    background: #2c94cc;
+}
+
+.registerStep02 .container .registerCon .autoComplete-list li.active {
+    background: #2c94cc none repeat scroll 0 0;
+}
+/*自动完成text结束*/
+
+
+/*项目列表*/
+.projectList .banner {
+    background: rgba(0, 0, 0, 0) url("../images/companyListBannerBg.jpg") repeat scroll 0 0;
+    width: 1070px;
+    margin: 20px auto 0;
+    padding-top: 65px;
+    padding-bottom: 25px;
+    background-size: cover;
+}
+
+.projectList .banner .bannerinner {
+    background: rgba(233, 233, 233, 0.20) none repeat scroll 0 0;
+    margin: 0 auto;
+    width: 74%;
+    padding-bottom: 26px;
+
+}
+
+.projectList .banner h1 {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1), 0 2px 0 rgba(0, 0, 0, 1);
+    color: white;
+    letter-spacing: 45px;
+    font-weight: bold;
+}
+
+.projectList .banner .srcBoxList {
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 30px;
+    position: relative;
+
+}
+
+/*自动完成text开始*/
+.projectList .banner .srcBoxList .autoComplete {
+    position: relative;
+    width: 30%;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+.projectList .banner .srcBoxList .autoComplete-downBtn {
+    border: none;
+    height: 39px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    width: 30px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll center center;
+    font-size: 0px;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.projectList .banner .srcBoxList .autoComplete-input {
+    border: none;
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 48px;
+}
+
+
+.projectList .banner .srcBoxList .autoComplete-list {
+    background: #fff none repeat scroll 0 0;
+    width: 181px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    top: 39px;
+    display: none;
+    z-index: 100;
+    max-height: 210px;
+    overflow: auto;
+}
+
+.projectList .banner .srcBoxList .autoComplete-list li {
+    cursor: pointer;
+    padding: 4px;
+}
+
+.projectList .banner .srcBoxList .autoComplete-list li:hover {
+    background: #2c94cc;
+}
+
+.projectList .banner .srcBoxList .autoComplete-list li.active {
+    background: #2c94cc none repeat scroll 0 0;
+}
+/*自动完成text结束*/
+
+
+.projectList .banner .srcBoxList .srcBoxListOption {
+    margin-bottom: 10px;
+
+}
+
+
+
+
+
+.projectList .banner .srcBoxList .srckey {
+    /*border:none;*/
+    /*margin:0;*/
+    width: 100%;
+    float: left;
+    height: 40px;
+    border-radius: 0px;
+    margin: 0;
+    border: none;
+}
+.projectList .banner .srcBoxList .srcSub {
+    border: medium none;
+    /*margin:0;*/
+    width: 8%;
+    height: 40px;
+    border-radius: 0;
+    background: #2c84cc;
+    position: absolute;
+    right: 0;
+}
+
+.projectList .banner .srcBoxList .srcSub i {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+.projectList .banner .srcBoxList .supperSrcBtn {
+    position: absolute;
+    top: 10px;
+    right: -74px;
+    cursor: pointer;
+    color: #2b85fd;
+    font-weight: bolder;
+
+}
+
+.projectList .banner .projectTypeWraper .srcTip {
+    /*color:#ccc;*/
+
+}
+
+.projectList .banner .srcBoxList .projectTypeWraper i {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 8px 8px 8px 30px;
+    border-radius: 3px;
+    font-style: normal;
+    cursor: pointer;
+    color: #2c84cc;
+    font-weight: 100;
+}
+.projectList .banner .srcBoxList .projectTypeWraper label i.type01 {
+    background: #fff url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px 4px / 19px auto;
+
+
+}
+.projectList .banner .srcBoxList .projectTypeWraper label i.type02 {
+    background: #fff url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px -65px / 19px auto;
+
+}
+.projectList .banner .srcBoxList .projectTypeWraper label i.type03 {
+    background: #fff url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px -136px / 19px auto;
+}
+
+.projectList .banner .srcBoxList .srcBoxListOption .srcBoxListOptionLabel {
+    float: left;
+    font-size: 14px;
+    margin-top: 8px;
+    color: white;
+
+}
+
+.projectList .banner .srcBoxList .srcBoxListOption label input {
+    display: none;
+}
+
+.projectList .banner .srcBoxList .srcBoxListOption label {
+    margin: 0;
+
+}
+
+
+.projectList .banner .srcBoxList .srcBoxListOption label input:checked + i.type01 {
+    background: rgb(43, 161, 230) url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px -31px / 19px auto;
+    color: white;
+}
+
+.projectList .banner .srcBoxList .srcBoxListOption label input:checked + i.type02 {
+    background: rgb(43, 161, 230) url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px -101px / 19px auto;
+    color: white;
+}
+
+.projectList .banner .srcBoxList .srcBoxListOption label input:checked + i.type03 {
+    background: rgb(43, 161, 230) url("../images/projectTypeLabelIcon.png") no-repeat scroll 4px -172px / 19px auto;
+    color: white;
+}
+
+.projectList .banner .srcBoxList .areaDesWraper {
+    border: 1px solid #ccc;
+    padding: 10px;
+    float: right;
+    width: 530px;
+
+}
+
+.projectList .banner .srcBoxList .areaDesWraper span {
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 38px;
+    background: white;
+    border-radius: 2px;
+    padding: 2px;
+    cursor: pointer;
+
+}
+
+.projectList .banner .srcBoxList>li+li {
+    display: none;
+}
+
+.projectList .banner .bannerinner form>.srcSub {
+    background: #2c84cc none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 0;
+    height: 40px;
+    color: white;
+    font-size: 13px;
+    padding: 10px 20px;
+    margin-left: 166px;
+    display: none;
+
+
+}
+.projectList .banner .bannerinner form>.srcSub i {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+
+
+.projectList .container .leftCol {
+    box-shadow: 0 0 2px #cccccc;
+    width: 750px;
+    float: left;
+    background: #fff;
+}
+
+.projectList .container .leftCol .projectListCon {
+    margin: 0;
+    border: none;
+}
+.projectList .container .leftCol .projectListItem {
+    background: #fff none repeat scroll 0 0;
+    /*-moz-border-right-colors:none;*/
+    padding: 20px;
+    border: 1px none #ccc;
+    border-top-style: solid;
+}
+
+.projectList .container .leftCol .projectListItem:hover {
+    border: 1px solid #2c84cc;
+}
+
+.projectList .container .leftCol a:last-child .projectListItem {
+    border-bottom: 1px solid #ccc;
+}
+
+.projectList .container .leftCol a:last-child .projectListItem:hover {
+    border-bottom: 1px solid #2c84cc;
+}
+
+.projectList .container .leftCol .projectListItem .projectListItem-column {
+    float: left;
+    margin-right: 5%;
+    height: 85px;
+
+}
+
+.projectList .container .leftCol .projectListItem .projectListItem-column h1 {
+    color: #2c84cc;
+    font-size: 18px;
+    margin: 0 20px 10px 0;
+}
+.projectList .container .leftCol .projectListItem .projectListItem-column h1 a {
+    color: #2c84cc !important;
+}
+.projectList .container .leftCol .projectListItem .projectListItem-column h1 a:hover {
+    color: #ff5837 !important;
+}
+
+.projectList .container .leftCol .projectListItem .projectListItem-column h2 {
+    color: #fff;
+    font-size: 15px;
+    background: orange;
+    display: inline-block;
+    border-radius: 2px;
+    margin-top: 1px;
+    padding: 5px;
+}
+.projectList .container .leftCol .projectListItem .projectListItem-column p {
+    color: #818181;
+    font-size: 15px;
+    margin-top: -4px;
+}
+
+.projectList .container .leftCol .projectListItem .projectListItem-column:first-child {
+    width: 65%;
+}
+.projectList .container .leftCol .projectListItem .projectListItem-column:first-child .companyLogo {
+    border: 1px solid #ccc;
+    float: left;
+    height: 100%;
+    margin-right: 15px;
+
+}
+
+.projectList .container .leftCol .projectListItem .projectListItem-column:nth-child(2) {
+    width: 20%;
+    font-size: 18px;
+    width: 20%;
+    color: orange;
+    font-size: 24px;
+    font-size: 20px;
+}
+.projectList .container .leftCol .projectListItem .projectListItem-column:last-child {
+    margin-right: 0;
+    width: 5%;
+    font-size: 23px;
+    color: #2c84cc;
+}
+
+
+
+
+
+
+
+.projectList .container .siderDis {
+    width: 300px;
+    float: right;
+    padding: 10px;
+    background: #fff;
+}
+.projectList .container .siderDis h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 15px;
+    margin-bottom: 10px;
+}
+
+
+.projectList .container .siderDis .jobLikeList {
+}
+.projectList .container .siderDis .jobLikeList .jobLikeListItems {
+    margin-bottom: 11px;
+}
+.projectList .container .siderDis .jobLikeimg {
+    border: 1px solid #ccc;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.projectList .container .siderDis p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #9d9d9d;
+}
+
+.projectList .container .siderDis p.title {
+    color: #337ab7;
+    font-size: 15px;
+
+}
+
+.projectList .container .siderDis p.title a {
+    color: #2c84cc !important;
+}
+.projectList .container .siderDis p.title a:hover {
+    color: #ff5837 !important;
+}
+
+
+.projectList .container .leftCol .paginationWraper {
+    width: 570px;
+    margin: 0 auto;
+    padding: 30px 0;
+    color: #000;
+    text-align:center;
+}
+
+.projectList .container .leftCol .paginationWraper .pagination {
+    /*float: left;*/
+    margin: 0;
+}
+.projectList .container .leftCol .paginationWraper .justPage {
+    width: 31px;
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+}
+.projectList .container .leftCol .paginationWraper .submit {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+    background: #fff;
+}
+.projectList .container .leftCol .paginationWraper .pagination li a.active {
+    background: #2c84cc;
+
+}
+
+/*发布项目页01*/
+.publishingProjectStep01 .container .page-header {
+    width: 100%;
+}
+
+.publishingProjectStep01 .container .stepNav {
+    margin: 0 auto;
+    width: 700px;
+    border-bottom: 1px solid #ccc;
+
+}
+.publishingProjectStep01 .container .stepNav .stepNavList {
+}
+.publishingProjectStep01 .container .stepNav .stepNavList .stepNavListItem {
+    background: #e3e3e3 none repeat scroll 0 0;
+    color: #ccc;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+    float: left;
+    margin-right: 169px;
+}
+
+.publishingProjectStep01 .container .stepNav .stepNavList .stepNavListItem.complete {
+    color: white;
+    background: #2c84cc;
+}
+
+.publishingProjectStep01 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.publishingProjectStep01 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    /*float:right;*/
+    margin-right: 0;
+}
+
+.publishingProjectStep01 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.publishingProjectStep01 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+
+}
+.publishingProjectStep01 .container .registerCon h2 {
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.publishingProjectStep01 .container .registerCon .projectTypeList {
+    margin: 0 auto;
+    width: 860px;
+    margin-top: 50px;
+}
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem {
+    float: left;
+    margin-right: 130px;
+    width: 200px;
+}
+
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:last-child {
+    margin-right: 0;
+}
+
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem .icon {
+    background: url("../images/projectTypeIconBg.png") repeat scroll 0 0 / 451px auto;
+    /*background-size:451px;*/
+    display: block;
+    height: 150px;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:first-child .icon {
+    background: url("../images/projectTypeIconBg.png") repeat scroll 0 0 / 451px auto;
+}
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:nth-child(2) .icon {
+    background: rgba(0, 0, 0, 0) url("../images/projectTypeIconBg.png") repeat scroll -150px 0 / 450px auto;
+}
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:last-child .icon {
+    background: url("../images/projectTypeIconBg.png") repeat scroll -301px 0 / 451px auto;
+}
+
+
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:first-child .icon:hover {
+    background: url("../images/projectTypeIconBg.png") repeat scroll 0 150.5px / 451px auto;
+}
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:nth-child(2) .icon:hover {
+    background: url("../images/projectTypeIconBg.png") repeat scroll -150px 150.5px / 451px auto;
+}
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem:last-child .icon:hover {
+    background: url("../images/projectTypeIconBg.png") repeat scroll -301px 150.5px / 451px auto;
+}
+
+.publishingProjectStep01 .container .registerCon .projectTypeList .projectTypeItem h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+/*发布项目页02*/
+.publishingProjectStep02 .container .page-header {
+    width: 100%;
+}
+
+.publishingProjectStep02 .container .stepNav {
+    margin: 0 auto;
+    width: 700px;
+    border-bottom: 1px solid #ccc;
+
+}
+.publishingProjectStep02 .container .stepNav .stepNavList {
+}
+.publishingProjectStep02 .container .stepNav .stepNavList .stepNavListItem {
+    background: #e3e3e3 none repeat scroll 0 0;
+    color: #ccc;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+    float: left;
+    margin-right: 169px;
+}
+.publishingProjectStep02 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.publishingProjectStep02 .container .stepNav .stepNavList .stepNavListItem.complete {
+    background: #2c84cc;
+    color: #fff;
+}
+.publishingProjectStep02 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    /*float:right;*/
+    margin-right: 0;
+}
+
+.publishingProjectStep02 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.publishingProjectStep02 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+
+}
+.publishingProjectStep02 .container .registerCon h2 {
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList {
+    margin: 0 auto;
+    width: 681px;
+    margin-top: 50px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem {
+    /*height:50px;*/
+    margin-bottom: 35px;
+    font-size: 15px;
+    position:relative;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem .textlabel {
+    margin: 0;
+    color: black;
+    font-weight: 500;
+    text-align: left;
+    font-size: 15px;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem select {
+    color: #999;
+    padding-left: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: solid 1px #000;*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem .edit {
+    color: #2c84cc !important;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem h2 {
+    margin-bottom: 12px !important;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem textarea {
+    padding: 10px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .textlabel {
+    float: left;
+    margin-top: 8px;
+
+}
+
+/*自动完成text开始*/
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete {
+    position: relative;
+    width: 200px;
+    box-sizing: border-box;
+    float: left;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-downBtn {
+    border: none;
+    height: 34px;
+    position: absolute;
+    right: 3px;
+    top: 1px;
+    width: 30px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 14px center;
+    font-size: 0;
+    cursor: pointer;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-input {
+    height: 36px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 48px;
+    margin-left: 4px;
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-list {
+    background: #fff none repeat scroll 0 0;
+    width: 202px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: absolute;
+    top: 35px;
+    display: none;
+    z-index: 100;
+    left: 4px;
+    max-height: 145px;
+    overflow: auto;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-list li {
+    cursor: pointer;
+    padding: 3px 3px 3px 10px;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-list li:hover {
+    background: #2c94cc;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectArea .autoComplete-list li.active {
+    background: #2c94cc none repeat scroll 0 0;
+}
+/*自动完成text结束*/
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectTime select {
+    display: inline;
+    width: 200px;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectTitle .errorTip {
+    top:62px;
+    /*width: 500px;*/
+
+}
+
+
+/*.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectDes textarea{*/
+/*height:200px;*/
+/*width:650px;*/
+/*}*/
+
+
+
+/*添加tags开始*/
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListIte.addTitleList {
+
+}
+
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper {
+    
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 5px 5px 0px 5px;
+    width: 90%;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .errorTip{
+    top: 62px;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .infoBtn {
+    color: #2c84cc;
+    font-size: 23px;
+    position: absolute;
+    right: -30px;
+    cursor: pointer;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .infoExample {
+    background: white;
+    border: 1px solid #2c84cc;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    width: 580px;
+    display: none;
+    left: 50%;
+    margin: -290px;
+    z-index: 5;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .infoExample h1 {
+    font-size: 20px;
+    text-align: left;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .TagsWraper {
+
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .addedTag {
+    background: #2c84cc none repeat scroll 0 0;
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 1px 5px 1px 10px;
+    color: white;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .addedTag i {
+    display: inline-block;
+    height: 23px;
+    text-align: center;
+    width: 22px;
+    cursor: pointer;
+    font-style: normal;
+
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .addTasBtn {
+    background: white none repeat scroll 0 0;
+    display: inline-block;
+    text-align: center;
+    width: 60px;
+    cursor: pointer;
+    font-size: 25px;
+    height: 26px;
+    line-height: 22px;
+    padding: 0;
+    border: 1px dashed #ccc;
+    color: #ccc;
+    float: left;
+    margin-bottom: 5px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .infoTip {
+    font-size: 12px;
+    margin-left: 10px;
+    float: left;
+    margin-top: 3px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .addTasBtn:hover {
+    
+    color: #2c84cc;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform {
+    width: 434px;
+    background: white none repeat scroll 0 0;
+    position: absolute;
+    top: 33px;
+    left: 10px;
+    border: 1px solid #ccc;
+    padding: 36px 20px 20px;
+    display: none;
+    z-index: 10;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformCloseBtn {
+    cursor: pointer;
+    display: block;
+    font-size: 30px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    right: 5px;
+    text-align: center;
+    top: 0;
+    transform: rotate(45deg);
+    width: 20px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems {
+    margin-bottom: 15px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems:last-child {
+    margin-bottom: 0;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems label {
+    float: left;
+    width: 100px;
+    font-family: "微软雅黑" !important;
+    color: #2c84cc;
+    font-weight: 100;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .addUserTag {
+    float: left;
+    width: 216px;
+    height: 28px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .addUserBtn {
+    height: 28px;
+    line-height: 14px;
+    margin-left: 20px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .AlwayTagssList {
+    float: left;
+    width: 292px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .AlwayTagssList .AlwayTagssListItems {
+    float: left;
+    cursor: pointer;
+    /*margin-left:20px;*/
+    margin-bottom: 10px;
+    font-size: 13px;
+    margin-right: 12px;
+    border: 1px solid #ccc;
+    padding: 1px 5px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .AlwayTagssList .AlwayTagssListItems:nth-child(4n+4) {
+    margin-right: 0;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .addTagsWraper .tagsFform .tagsFformItems .AlwayTagssList .AlwayTagssListItems.active {
+    
+    background: orange;
+    color: white;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .TagInfo {
+    margin-top: 10px;
+    width: 614px;
+    position: relative;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .TagInfo .TagInfoLabel {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    float: left;
+    width: 115px;
+    padding-left: 10px;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .TagInfo textarea {
+    width: 499px;
+    float: left;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .TagInfo .errorTip {
+    right:-148px;
+    top: 6px;
+    display:inline-block;
+    left:auto;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.addTitleList .TagInfo .errorTip span {
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+}
+
+
+
+
+/*上传附件*/
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure {
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .textlabel {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    float: left;
+    margin-top: 2px;
+    margin-bottom: 0px !important;
+    margin-right: 10px;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .addEnclosureBtn {
+    background: white none repeat scroll 0 0;
+    border: 1px dashed #ccc;
+    color: #ccc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    height: 21px;
+    line-height: 16px;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    float: left;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .addEnclosureBtn:hover {
+    color: #2c84cc;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .infoTip {
+    font-size: 12px;
+    margin-left: 10px;
+    float: left;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList {
+    clear: both;
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 360px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList .upLoadEnclosureListItems {
+    
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList .upLoadEnclosureListItems .upLoadEnclosureInput {
+    display: inline;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList .upLoadEnclosureListItems .errorTip {
+    position: absolute;
+    right: -90px;
+    top: 0;
+    left:auto;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList .upLoadEnclosureListItems .errorTip .arrow {
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadEnclosure .upLoadEnclosureList .upLoadEnclosureListItems .upLoadEnclosureDel {
+    color: #2c84cc;
+    font-style: normal;
+    cursor: pointer;
+
+}
+
+
+/*上传数据集*/
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet {
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .textlabel {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+    float: left;
+    margin-top: 2px;
+    margin-bottom: 0px !important;
+    margin-left: 0px;
+    margin-right: 10px;
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .addDataSetBtn {
+    background: white none repeat scroll 0 0;
+    border: 1px dashed #ccc;
+    color: #ccc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 25px;
+    height: 21px;
+    line-height: 16px;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+    float: left;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .addDataSetBtn:hover {
+    color: #2c84cc;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .infoTip {
+    font-size: 12px;
+    margin-left: 10px;
+    float: left;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList {
+    clear: both;
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 395px;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems {
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 1px solid rgba(49, 168, 249, 0.62);
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList {
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems {
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems .error {
+    position: absolute;
+    right: -134px;
+    top: 0px;
+    width: auto;
+    font-weight: 700;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems .error span {
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems.upLoadDataSetInput input {
+    display: inline;
+
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFileFirst .errorTip {
+    left: auto;
+    position: absolute;
+    right:-130px;
+    top: 0;
+    width:auto;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFileFirst .errorTip .arrow{
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+
+}
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFileFirst .upLoadDataSetDel {
+    color: #2c84cc;
+    font-style: normal;
+    cursor: pointer;
+    margin-right: 10px;
+    position: absolute;
+    right: 25px;
+    top: 0;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems.upLoadDataSetFile input {
+    display: inline;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetSubListItems label {
+    color:#2c84cc;
+    float:left;
+    font-weight:100;
+    width:100px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFile textarea {
+    height: 150px;
+    width: 260px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFile .errorTip {
+    left: auto;
+    position: absolute;
+    right:-160px;
+    top: 0;
+    width:auto;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetFile .errorTip .arrow {
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetField textarea {
+    height: 100px;
+    width: 260px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetField .errorTip {
+    left: auto;
+    position: absolute;
+    right:-160px;
+    top: 0;
+    width:auto;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.upLoadDataSet .upLoadDataSetList .upLoadDataSetListItems .upLoadDataSetSubList .upLoadDataSetField .errorTip .arrow {
+    left: -10px;
+    top: 10px;
+    transform: rotate(270deg);
+}
+
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectNav {
+    text-align: center;
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectNav .prevStep {
+    color: #2c84cc !important;
+    margin-right: 10px;
+    padding: 0px;
+
+}
+
+.publishingProjectStep02 .container .registerCon .projectInfList .projectInfListItem.projectNav .btn {
+    padding: 4px 30px;
+    color: white !important;
+    margin-right: 50px;
+
+}
+
+
+/*发布项目页03*/
+.publishingProjectStep03 .container .page-header {
+    width: 100%;
+}
+
+.publishingProjectStep03 .container .stepNav {
+    margin: 0 auto;
+    width: 700px;
+    border-bottom: 1px solid #ccc;
+
+}
+.publishingProjectStep03 .container .stepNav .stepNavList {
+}
+.publishingProjectStep03 .container .stepNav .stepNavList .stepNavListItem {
+    background: #e3e3e3 none repeat scroll 0 0;
+    color: #ccc;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+    float: left;
+    margin-right: 169px;
+}
+
+.publishingProjectStep03 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.publishingProjectStep03 .container .stepNav .stepNavList .stepNavListItem.complete {
+    background: #2c84cc;
+    color: white;
+}
+.publishingProjectStep03 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    /*float:right;*/
+    margin-right: 0;
+}
+
+.publishingProjectStep03 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.publishingProjectStep03 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+
+}
+.publishingProjectStep03 .container .registerCon h2 {
+    color: #999;
+    font-size: 15px;
+    text-align: center;
+
+}
+.publishingProjectStep03 .container .registerCon h3 {
+    font-size: 20px;
+    margin: 0 auto;
+    width: 460px;
+    margin-top: 50px;
+
+}
+
+.publishingProjectStep03 .container .registerCon title {
+
+}
+
+.publishingProjectStep03 .container .registerCon .priceList {
+    width: 460px;
+    margin: 50px auto 0;
+}
+.publishingProjectStep03 .container .registerCon .priceList li {
+    padding: 14px;
+    border: 1px solid #ccc;
+}
+
+.publishingProjectStep03 .container .registerCon .priceList li:last-child {
+    border: none;
+    text-align: center;
+}
+.publishingProjectStep03 .container .registerCon .priceList li:first-child {
+    border-bottom: none;
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap input {
+    vertical-align: -1px;
+}
+.publishingProjectStep03 .container .registerCon .priceList i {
+    margin-left: 17px;
+    margin-right: 12px;
+    font-size: 15px;
+}
+.publishingProjectStep03 .container .registerCon .priceList label {
+    color: #fe9d5c;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap {
+    background: rgba(50, 159, 242, 0.2) none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-title {
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-title input {
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-input {
+}
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-input i {
+    background: #ccc;
+    display: inline-block;
+    margin-left: 32px;
+    padding: 4px 8px;
+    border: 1px solid #8d8d8d;
+    font-size: 15px;
+    float: left;
+    margin-right: 0;
+    color: #8d8d8d;
+}
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-input input {
+    height: 25px;
+    vertical-align: 1px;
+    border-left: 0;
+    border-radius: 0;
+    border-color: #8d8d8d;
+    width: 200px;
+    padding: 0 0 0 5px;
+}
+.publishingProjectStep03 .container .registerCon .priceList .price-top-wrap .price-top-wrap-input input+label {
+    margin-left: 45px;
+    margin-top: 5px;
+    /*top: 10px;*/
+}
+.publishingProjectStep03 .container .registerCon .priceList .price-bottom-wrap {
+    background: white none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .price-bottom-wrap i {
+    margin-left: 21px;
+
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .projectInfListItem.projectNav .prevStep {
+    color: #2c84cc !important;
+    margin-right: 10px;
+    padding: 0px;
+
+}
+
+.publishingProjectStep03 .container .registerCon .priceList .projectInfListItem.projectNav .btn {
+    padding: 4px 30px;
+    color: white !important;
+    margin-right: 48px;
+
+}
+
+
+/*发布项目页04*/
+.publishingProjectStep04 .container .page-header {
+    width: 100%;
+}
+
+.publishingProjectStep04 .container .stepNav {
+    margin: 0 auto;
+    width: 700px;
+    border-bottom: 1px solid #ccc;
+
+}
+.publishingProjectStep04 .container .stepNav .stepNavList {
+}
+.publishingProjectStep04 .container .stepNav .stepNavList .stepNavListItem {
+    background: #e3e3e3 none repeat scroll 0 0;
+    color: #ccc;
+    border-radius: 28px;
+    height: 28px;
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 10px solid #eaeaea;
+    box-sizing: content-box;
+    position: relative;
+    top: 34px;
+    float: left;
+    margin-right: 169px;
+}
+
+.publishingProjectStep04 .container .stepNav .stepNavList .stepNavListItem span {
+    color: #000;
+    display: block;
+    margin-left: -85px;
+    width: 200px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+.publishingProjectStep04 .container .stepNav .stepNavList .stepNavListItem.complete {
+    background: #2c84cc;
+    color: white;
+}
+.publishingProjectStep04 .container .stepNav .stepNavList .stepNavListItem:last-child {
+    /*float:right;*/
+    margin-right: 0;
+}
+
+.publishingProjectStep04 .container .registerCon {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 60px;
+    box-shadow: 0 1px 1px 1px rgba(153, 153, 153, 0.3);
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.publishingProjectStep04 .container .registerCon h1 {
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 20px;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoTable {
+    width: 1030px;
+    border: medium none;
+    margin: 50px auto 0;
+
+}
+
+
+.publishingProjectStep04 .container .registerCon .infoTable tr {
+    border-bottom: 1px solid #ccc;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoTable td {
+    font-size: 15px;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+
+}
+
+
+.publishingProjectStep04 .container .registerCon .infoMain {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.publishingProjectStep04 .container .registerCon .projectNav {
+    text-align: center;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabBtnGro {
+    background: #F6F6F6;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabBtnGro .tabBtn {
+    float: left;
+    width: 129px;
+    background: #F6F6F6 none repeat scroll 0 0;
+    color: #666;
+    font-size: 18px;
+    border: 1px solid #E5E5E5;
+    border-right: none;
+    font-weight: lighter;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabBtnGro .tabBtn i {
+    font-size: 17px;
+    margin-left: 12px;
+    margin-top: 0px;
+    vertical-align: 0px;
+
+}
+
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabBtnGro .tabBtn:first-child {
+    background: #fff;
+    color: #2c84cc;
+    border-top: 2px solid #2c84cc;
+    border-bottom: none;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabBtnGro .tabBtn:last-child {
+    border-right: 1px solid #ccc;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane {
+    font-size: 15px;
+    color: #666666;
+    margin-top: 11px;
+}
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane h1 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    border-left: 4px solid #2c84cc;
+    padding-left: 8px;
+    color: #000;
+    font-family: 微软雅黑;
+    text-align: left;
+    letter-spacing: 0;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane h2 {
+    color: #2c84cc;
+    font-size: 15px;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane h2 i {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane p {
+    line-height: 25px;
+    padding-left: 10px;
+    /*font-size:15px;*/
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .dataList {
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .dataList .dataListItems {
+    color: #2c84cc;
+    cursor: pointer;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .dataList .dataListItems i {
+    margin-left: 10px;
+    margin-right: 20px;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .dataList .dataListItems:hover {
+    color: #c54d48;
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .fieldsList .fieldsListItems i {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: black;
+
+}
+
+.publishingProjectStep04 .container .registerCon .infoMain .tabPlane .fieldsList .fieldsListItems span {
+    color: black;
+
+}
+
+
+.publishingProjectStep04 .container .registerCon p {
+
+}
+
+.publishingProjectStep04 .container .registerCon p input {
+    margin-right: 10px;
+    vertical-align: -2px;
+    margin-bottom: 20px;
+}
+
+.publishingProjectStep04 .container .registerCon p a {
+    color: #2c84cc !important;
+
+}
+
+.publishingProjectStep04 .container .registerCon .ok {
+    padding: 4px 30px;
+}
+.publishingProjectStep04 .container .registerCon .prevStep {
+    color: #2c84cc !important;
+    margin-right: 10px;
+    padding: 0;
+    margin-top: 75px;
+}
+
+
+
+/*项目详情页*/
+
+
+.projectInfo .banner {
+    background: url("../images/companyListBannerBg.jpg");
+    width: 1070px;
+    height: 250px;
+    margin: 20px auto 20px;
+    padding-top: 65px;
+    margin-bottom: 10px;
+}
+
+.projectInfo .banner h1 {
+    text-align: center;
+    font-size: 32px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1), 0 2px 0 rgba(0, 0, 0, 1);
+    color: white;
+    letter-spacing: 45px;
+    font-weight: bold;
+}
+
+.projectInfo .banner .srcBoxList {
+    height: 60px;
+    margin: 0 auto;
+    width: 600px;
+    margin-top: 30px;
+    position: relative;
+
+}
+.projectInfo .banner .srcBoxList .srcType {
+    /*border:none;*/
+    /*margin:0;*/
+    width: 17%;
+    float: left;
+    height: 40px;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.projectInfo .banner .srcBoxList .srcType option {
+
+}
+
+.projectInfo .banner .srcBoxList .srckey {
+    /*border:none;*/
+    /*margin:0;*/
+    width: 75%;
+    float: left;
+    height: 40px;
+    border-radius: 0px;
+    margin: 0;
+    border: none;
+}
+.projectInfo .banner .srcBoxList .srcSub {
+    border: medium none;
+    /*margin:0;*/
+    width: 8%;
+    height: 40px;
+    border-radius: 0;
+    background: #2c84cc;
+}
+
+.projectInfo .banner .srcBoxList .srcSub i {
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+
+
+
+.projectInfo .banner .srcBoxList .srcType {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*border: solid 1px #000;*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 14px;
+    background: #fff url("http://ourjs.github.io/static/2015/arrow.png") no-repeat scroll 95% center;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.projectInfo .banner .srcBoxList .srcType::-ms-expand {
+    display: none;
+}
+
+
+.projectInfo {
+    padding-top: 70px;
+
+}
+
+
+.projectInfo .container .leftCol {
+    box-shadow: 0 0 2px #cccccc;
+    width: 750px;
+    float: left;
+    margin: 0;
+    border: 20px;
+    border-bottom: 1px solid #ccc;
+    border-width: 20px 20px 1px;
+}
+
+.projectInfo .container .leftCol .blurred {
+    width: 100%;
+    display: block;
+
+}
+.projectInfo .container .leftCol .projectInfoTitle {
+    background: white none repeat scroll 0 0;
+    padding: 20px;
+
+}
+.projectInfo .container .leftCol .companyWiew {
+    height: 80px;
+
+}
+.projectInfo .container .leftCol .companyWiew .companyLogo {
+    float: left;
+    position: relative;
+    top: -40px;
+    margin-left: 15px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #ccc;
+
+}
+.projectInfo .container .leftCol .companyWiew .companyUrl {
+    float: left;
+    margin-left: 10px;
+    margin-top: -8px;
+    position: relative;
+
+}
+.projectInfo .container .leftCol .companyWiew .companyUrl h1 {
+    font-size: 20px;
+    margin: 15px 0 5px;
+    color: #2c84cc;
+
+}
+.projectInfo .container .leftCol .companyWiew .companyUrl p {
+    color: #666666;
+    font-size: 20px;
+    width: 540px;
+
+}
+
+.projectInfo .container .leftCol .companyWiew .companyUrl i {
+    color: #2c84cc;
+    font-size: 21px;
+    position: absolute;
+    right: -22px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.projectInfo .container .leftCol .companyWiew .review {
+    float: right;
+    height: 40px;
+    background: #2c84cc;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 15px;
+
+}
+
+.projectInfo .container .leftCol .progressBarWraper {
+    background: white none repeat scroll 0 0;
+    padding: 0 20px 0 20px;
+    height: 70px;
+    position: relative;
+}
+
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarvList {
+    border-bottom: 1px solid #2c84cc;
+    padding: 0 80px;
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem {
+    background: #2c84cc none repeat scroll 0 0;
+    color: white;
+    height: 15px;
+    width: 15px;
+    float: left;
+    border-radius: 10px;
+    line-height: 15px;
+    text-align: center;
+    margin-right: 163px;
+    position: relative;
+    top: 8px;
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem:first-child {
+
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem:last-child {
+    margin-right: 0;
+}
+
+@keyframes lighting {
+    0% {
+        box-shadow: 0 0 2px 3px rgba(0, 172, 252, 0.54);
+    }
+    50% {
+        box-shadow: 0 0 2px 6px rgba(0, 172, 252, 0.54);
+    }
+    100% {
+        box-shadow: 0 0 2px 3px rgba(0, 172, 252, 0.54);
+    }
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem.now {
+    box-shadow: 0 0 2px 6px rgba(0, 172, 252, 0.54);
+    animation: 1.5s ease 0s normal none infinite running lighting;
+
+}
+
+
+
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem.future {
+    visibility: hidden;
+
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem.future span {
+    color: #ccc;
+}
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarListItem span {
+    display: block;
+    width: 159px;
+    position: absolute;
+    top: 27px;
+    visibility: visible;
+    left: -71px;
+    font-size: 15px;
+    color: #2c84cc;
+}
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarBgList {
+    position: absolute;
+    width: 710px;
+    top: 0px;
+}
+.projectInfo .container .leftCol .progressBarWraper .progressBarBgList .progressBarBgItem {
+    float: left;
+    width: 25%;
+    height: 54px;
+    margin-top: 16px;
+    background: rgba(0, 0, 0, 0) url("../images/process-arrow.png") no-repeat scroll 98% center;
+}
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarBgList .progressBarBgItem.now {
+    background-color: rgba(47, 158, 240, 0.3);
+}
+
+.projectInfo .container .leftCol .progressBarWraper .progressBarBgList .progressBarBgItem.future {
+    background-image: none;
+}
+
+
+
+
+
+/*添加选项卡样式*/
+
+.projectInfoMain {
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.projectInfoMain .tabBtnGro {
+    background: #F6F6F6;
+
+}
+
+.projectInfoMain .tabBtnGro .tabBtn {
+    float: left;
+    width: 129px;
+    background: #F6F6F6 none repeat scroll 0 0;
+    color: #666;
+    font-size: 18px;
+    border: 1px solid #E5E5E5;
+    border-right: none;
+    font-weight: lighter;
+    text-align: center;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.projectInfoMain .tabBtnGro .tabBtn i {
+    font-size: 17px;
+    margin-left: 12px;
+    margin-top: 0px;
+    vertical-align: 0px;
+
+}
+
+
+.projectInfoMain .tabBtnGro .tabBtn:first-child {
+    background: #fff;
+    color: #2c84cc;
+    border-top: 2px solid #2c84cc;
+    border-bottom: none;
+}
+
+.projectInfoMain .tabBtnGro .tabBtn:last-child {
+    border-right: 1px solid #ccc;
+}
+
+.projectInfoMain .tabPlane {
+    font-size: 15px;
+    color: #666666;
+    margin-top: 11px;
+}
+.projectInfoMain .tabPlane h1 {
+    font-size: 16px;
+    margin-bottom: 18px;
+    border-left: 4px solid #2c84cc;
+    padding-left: 8px;
+    color: #000;
+    font-family: 微软雅黑;
+}
+
+.projectInfoMain .tabPlane h2 {
+    color: #2c84cc;
+    font-size: 15px;
+}
+
+.projectInfoMain .tabPlane h2 i {
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.projectInfoMain .tabPlane p {
+    line-height: 25px;
+    padding-left: 10px;
+    /*font-size:15px;*/
+}
+
+.projectInfoMain .tabPlane .dataList {
+
+}
+
+.projectInfoMain .tabPlane .dataList .dataListItems {
+    color: #2c84cc;
+    cursor: pointer;
+}
+
+.projectInfoMain .tabPlane .dataList .dataListItems i {
+    margin-left: 10px;
+    margin-right: 20px;
+
+}
+
+.projectInfoMain .tabPlane .dataList .dataListItems:hover {
+    color: #c54d48;
+}
+
+.projectInfoMain .tabPlane .fieldsList .fieldsListItems i {
+    margin-left: 10px;
+    margin-right: 20px;
+    color: black;
+
+}
+
+.projectInfoMain .tabPlane .fieldsList .fieldsListItems span {
+    color: black;
+
+}
+
+
+
+
+/*之前的样式
+.projectInfo .container .leftCol  .projectInfoMain{
+    background:white;
+    margin-top:20px;
+    padding:20px;
+}
+
+.projectInfo .container .leftCol  .projectInfoMain h1{
+    color:#2c84cc;
+    font-size:25px;
+}
+.projectInfo .container .leftCol  .projectInfoMain p{
+    font-size:15px;
+    color:#666666;
+}
+*/
+
+
+
+
+.projectInfo .container .siderDis {
+    width: 300px;
+    float: right;
+}
+
+.projectInfo .container .siderDis .competitiveBidding {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+
+.projectInfo .container .siderDis .competitiveBidding h1 {
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+
+.projectInfo .container .siderDis .competitiveBidding .comList h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 10px;
+}
+.projectInfo .container .siderDis .competitiveBidding .comList .comListItems {
+    /*border:1px solid #EEEEEE;*/
+    border-bottom: 1px solid #EEEEEE;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.projectInfo .container .siderDis .competitiveBidding .comList .comListItems span {
+    color: #2c84cc;
+    display: inline-block;
+    width: 100px;
+
+}
+
+.projectInfo .container .siderDis .competitiveBidding button {
+    padding: 5px 20px;
+    float: right;
+
+}
+
+
+
+.projectInfo .container .siderDis .getEmail {
+    background: white;
+    margin-bottom: 10px;
+    padding: 10px;
+
+}
+
+
+.projectInfo .container .siderDis .getEmail h1 {
+    font-size: 17px;
+    margin-top: 5px;
+    float: left;
+    margin-bottom: 20px;
+
+}
+
+.projectInfo .container .siderDis .getEmail input {
+    margin-bottom: 10px;
+
+}
+.projectInfo .container .siderDis .getEmail button {
+    padding: 5px 20px;
+    float: right;
+
+}
+
+
+.projectInfo .container .siderDis .Recommend {
+    padding: 10px;
+    background: white;
+}
+
+.projectInfo .container .siderDis .Recommend h1 {
+    font-family: "微软雅黑";
+    font-size: 17px;
+    line-height: 25px;
+    margin: 0 0 10px;
+}
+
+
+.projectInfo .container .siderDis .Recommend .jobLikeList {
+}
+.projectInfo .container .siderDis .Recommend .jobLikeList .jobLikeListItems {
+    margin-bottom: 11px;
+}
+.projectInfo .container .siderDis .Recommend .jobLikeimg {
+    border: 1px solid #ccc;
+    width: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.projectInfo .container .siderDis .Recommend p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #9d9d9d;
+}
+
+.projectInfo .container .siderDis .Recommend p.title {
+    color: #337ab7;
+    font-size: 15px;
+
+}
+
+.projectInfo .container .siderDis p.title a {
+    color: #2c84cc !important;
+}
+.projectInfo .container .siderDis p.title a:hover {
+    color: #ff5837 !important;
+}
+
+/*用户主页关注页*/
+.userIndexReviews .container .page-header {
+    width: 100%;
+}
+.userIndexReviews .container .userIndex {
+    margin-top:20px;
+    padding-bottom: 50px;
+}
+
+.userIndexReviews .container .userIndex .leftCol{
+    float:left;
+    width:18%;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+    margin-left:-15px;
+
+}
+.userIndexReviews .container .userIndex .leftCol .userMenuList{
+    margin-bottom:0;
+
+}
+.userIndexReviews .container .userIndex .leftCol .userMenuList .userMenuListIetms{
+    font-size:13px;
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexReviews .container .userIndex .leftCol .userMenuList .userMenuListIetms a{
+    display:block;
+    padding:10px 10px 10px 15px;
+    color:#2c84cc !important;
+}
+
+.userIndexReviews .container .userIndex .leftCol .userMenuList .userMenuListIetms a:hover{
+    background:#2e9ceb;
+    color:white !important;
+}
+
+.userIndexReviews .container .userIndex .leftCol .userMenuList .userMenuListIetms a.active{
+    color:#000 !important;
+
+}
+
+.userIndexReviews .container .userIndex .leftCol .userMenuList .userMenuListIetms:last-child{
+
+    border-bottom:none;
+}
+.userIndexReviews .container .userIndex .rightCol{
+    float:right;
+    width:82%;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+
+}
+
+.userIndexReviews .container .userIndex .rightCol .userAcconut{
+    margin-bottom:20px;
+    border-bottom:12px solid #ccc;
+    padding:15px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut > h1{
+    font-size:20px;
+    margin:0 0 20px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList{
+    padding-left:20px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle{
+    margin-bottom:10px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList{
+
+}
+
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList .items{
+    float:left;
+    width:33%;
+    font-size:15px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems{
+    margin-bottom:10px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList{
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items{
+    float:left;
+    width:33%;
+    height:55px;
+    padding-top:0px;
+    font-size:12px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child{
+    color:#2c84cc;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child .companyLogo{
+    border:1px solid #ccc;
+    width:50px;
+    margin-right:10px;
+    vertical-align:bottom;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(2){
+    padding-top:30px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(3){
+    padding-top:23px;
+    text-align:right;
+}
+
+.userIndexReviews .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(3) button{
+    font-size:12px;
+    height:30px;
+    padding:6px;
+
+}
+
+.userIndexReviews .container .userIndex .rightCol .userAcconut .paginationWraper {
+    color: #000;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    width: 570px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .paginationWraper .pagination {
+    float: left;
+    margin: 0;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .paginationWraper .justPage {
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+    width: 31px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .paginationWraper .submit {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+}
+.userIndexReviews .container .userIndex .rightCol .userAcconut .paginationWraper .pagination li a.active {
+    background: #2c84cc none repeat scroll 0 0;
+}
+
+.userIndexReviews .container .userIndex .rightCol .reviewExpert{
+    padding:15px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert > h1{
+    font-size:20px;
+    margin:0 0 20px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList{
+    padding-left:20px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListTitle{
+    margin-bottom:10px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList{
+
+}
+
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList .items{
+    float:left;
+    width:25%;
+    font-size:15px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems{
+    margin-bottom:10px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList{
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items{
+    float:left;
+    width:25%;
+    height:55px;
+    padding-top:0px;
+    font-size:12px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child{
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child .companyLogo{
+    border:1px solid #ccc;
+    width:50px;
+    margin-right:10px;
+    vertical-align:bottom;
+    float:left;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child p{
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items .name{
+    margin-bottom:0;
+    margin-top:11px;
+    color:#2c84cc;
+    font-size:15px;
+
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(2){
+    padding-top:30px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(3){
+    padding-top:30px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(4){
+    padding-top:23px;
+    text-align:right;
+}
+
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(4) button{
+    font-size:12px;
+    height:30px;
+    padding:6px;
+
+}
+
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .paginationWraper {
+    color: #000;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    width: 570px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .paginationWraper .pagination {
+    float: left;
+    margin: 0;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .paginationWraper .justPage {
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+    width: 31px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .paginationWraper .submit {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+}
+.userIndexReviews .container .userIndex .rightCol .reviewExpert .paginationWraper .pagination li a.active {
+    background: #2c84cc none repeat scroll 0 0;
+}
+
+
+
+
+/*用户主页项目页*/
+.userIndexProject .container .page-header {
+    width: 100%;
+}
+.userIndexProject .container .userIndex {
+    margin-top:20px;
+    padding-bottom: 50px;
+}
+
+.userIndexProject .container .userIndex .leftCol{
+    float:left;
+    width:18%;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+    margin-left:-15px;
+
+}
+.userIndexProject .container .userIndex .leftCol .userMenuList{
+    margin-bottom:0;
+
+}
+.userIndexProject .container .userIndex .leftCol .userMenuList .userMenuListIetms{
+    font-size:13px;
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexProject .container .userIndex .leftCol .userMenuList .userMenuListIetms a{
+    display:block;
+    padding:10px 10px 10px 15px;
+    color:#2c84cc !important;
+}
+
+.userIndexProject .container .userIndex .leftCol .userMenuList .userMenuListIetms a:hover{
+    background:#2e9ceb;
+    color:white !important;
+}
+
+.userIndexProject .container .userIndex .leftCol .userMenuList .userMenuListIetms a.active{
+    color:#000 !important;
+
+}
+
+.userIndexProject .container .userIndex .leftCol .userMenuList .userMenuListIetms:last-child{
+
+    border-bottom:none;
+}
+.userIndexProject .container .userIndex .rightCol{
+    float:right;
+    width:82%;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut{
+    padding:15px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut > h1{
+    font-size:20px;
+    margin:0 0 20px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList{
+    padding-left:20px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle{
+    margin-bottom:10px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList{
+
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListTitle .reviewExpertListTitleList .items{
+    float:left;
+    width:33%;
+    font-size:15px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems{
+    margin-bottom:10px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList{
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items{
+    float:left;
+    width:33%;
+    height:55px;
+    padding-top:0px;
+    font-size:12px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child{
+    color:#2c84cc;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:first-child .companyLogo{
+    border:1px solid #ccc;
+    width:50px;
+    margin-right:10px;
+    vertical-align:bottom;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(2){
+    padding-top:30px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(3){
+    padding-top:23px;
+    text-align:right;
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems .reviewExpertListItemsList .items:nth-child(3) button{
+    font-size:12px;
+    padding:6px;
+    position: relative;
+    z-index: 10;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3){
+    /*background:lavender;*/
+    position:relative;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper{
+    animation-delay: 0s;
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    position:absolute;
+    right:100px;
+    width:260px;
+    height:50px;
+    top:15px;
+    display:none;
+    border-top:1px solid #2c84cc;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList{
+    margin-top:-9px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems{
+    float:left;
+    color:white;
+    position:relative;
+    margin-right:68px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems label{
+    cursor:pointer;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems:last-child{
+    margin-right:0;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems i.fa{
+    background:#ccc none repeat scroll 0 0;
+    border-radius:50%;
+    padding:1px;
+
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems input{
+    display:none;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems input:checked+i{
+    background:#2c84cc;
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems input:checked+i+.text{
+    color:#2c84cc;
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems .text{
+    display:block;
+    position:absolute;
+    width:50px;
+    margin-left:-19px;
+    top:25px;
+    color:#ccc;
+
+}
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems.over .fa{
+    background:#2c84cc;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .reviewExpertList .reviewExpertListItems.working .reviewExpertListItemsList .items:nth-child(3) .progressBarWraper .progressList .progressListItems.over .text{
+    color:#2c84cc;
+}
+
+
+
+
+.userIndexProject .container .userIndex .rightCol .userAcconut .paginationWraper {
+    color: #000;
+    margin: 0 auto;
+    padding: 30px 0 0;
+    width: 570px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .paginationWraper .pagination {
+    float: left;
+    margin: 0;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .paginationWraper .justPage {
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+    width: 31px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .paginationWraper .submit {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+}
+.userIndexProject .container .userIndex .rightCol .userAcconut .paginationWraper .pagination li a.active {
+    background: #2c84cc none repeat scroll 0 0;
+}
+
+
+
+/*用户主页消息页*/
+.userIndexMessage .container .page-header {
+    width: 100%;
+}
+.userIndexMessage .container .userIndex {
+    margin-top:20px;
+    padding-bottom: 50px;
+}
+
+.userIndexMessage .container .userIndex .leftCol{
+    float:left;
+    width:18%;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+    margin-left:-15px;
+
+}
+.userIndexMessage .container .userIndex .leftCol .userMenuList{
+    margin-bottom:0;
+
+}
+.userIndexMessage .container .userIndex .leftCol .userMenuList .userMenuListIetms{
+    font-size:13px;
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexMessage .container .userIndex .leftCol .userMenuList .userMenuListIetms a{
+    display:block;
+    padding:10px 10px 10px 15px;
+    color:#2c84cc !important;
+}
+
+.userIndexMessage .container .userIndex .leftCol .userMenuList .userMenuListIetms a:hover{
+    background:#2e9ceb;
+    color:white !important;
+}
+
+.userIndexMessage .container .userIndex .leftCol .userMenuList .userMenuListIetms a.active{
+    color:#000 !important;
+
+}
+
+.userIndexMessage .container .userIndex .leftCol .userMenuList .userMenuListIetms:last-child{
+
+    border-bottom:none;
+}
+.userIndexMessage .container .userIndex .rightCol{
+    float:right;
+    width:82%;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+
+}
+/*项目信息开始---------------------------------------------------------------*/
+.userIndexMessage .container .userIndex .rightCol .userAcconut{
+    margin-bottom:20px;
+    border-bottom:12px solid #ccc;
+    padding:15px;
+
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut > h1{
+    font-size:20px;
+    margin:0;
+}
+
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab{
+    width:100%;
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabBtnGro{
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabBtnGro .tabBtn{
+    float:left;
+    width:100px;
+    cursor:pointer;
+    color:#2c84cc;
+    height:55px;
+    line-height:60px;
+    text-align:center;
+    position:relative;
+    font-size:14px;
+    background-repeat:no-repeat;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabBtnGro .tabBtn.active::before{
+    content:'';
+    background-image:url("../images/formTipArrowUp02.png");
+    background-repeat:no-repeat;
+    background-position:center 26px;
+    display:block;
+    height:50px;
+    left:3px;
+    position:absolute;
+    width:90px;
+    z-index:6;
+    background-size:28% auto;
+    bottom:-13.5px;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabBtnGro .tabBtn:first-child{
+    background-color:#fff;
+    color:black;
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabPlane{
+    padding:10px 20px 20px;
+    padding-top:10px;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabPlane .ctrlBar{
+    font-size:12px;
+    margin-top:10px;
+
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabPlane .ctrlBar a{
+    color:#2c84cc !important;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabPlane .ctrlBar .markReaded{
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut #projectMessageTab .tabPlane .ctrlBar .markClear{
+
+}
+
+/*项目消息，未读消息*/
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .unReadEmailList{
+    margin-left:-10px;
+    position:relative;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .unReadEmailList .emailListItems{
+    height:40px;
+    border-bottom:1px solid #ccc;
+    line-height:40px;
+    padding-left:5px;
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .unReadEmailList .emailListItems .time{
+    color:#2c84cc;
+    position:absolute;
+    right:0;
+}
+
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .unReadEmailList .emailListItems .fa-envelope{
+    color:#2c84cc;
+}
+
+/*项目消息，已读消息*/
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .ReadedEmailList{
+    margin-left:-10px;
+    margin-top:10px;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .ReadedEmailList .emailListItems{
+    height:40px;
+    border-bottom:1px solid #ccc;
+    line-height:40px;
+    padding-left:5px;
+    position:relative;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .ReadedEmailList .emailListItems .time{
+    color:#2c84cc;
+    position:absolute;
+    right:0;
+}
+.userIndexMessage .container .userIndex .rightCol .userAcconut .projectMessageTab .tabPlane .ReadedEmailList .emailListItems .fa-envelope{
+    color:#2c84cc;
+}
+
+/*统一分页开始*/
+.userIndexMessage .container .userIndex .rightCol .tabPlane .paginationWraper {
+    color: #000;
+    margin: 0 auto;
+    padding:30px 0;
+    width:570px;
+    padding-bottom:0px;
+}
+.userIndexMessage .container .userIndex .rightCol .tabPlane .paginationWraper .pagination {
+    float: left;
+    margin: 0;
+}
+.userIndexMessage .container .userIndex .rightCol .tabPlane .paginationWraper .justPage {
+    border: 1px solid #ccc;
+    height: 24px;
+    margin-top: 4px;
+    text-align: center;
+    width: 31px;
+}
+.userIndexMessage .container .userIndex .rightCol .tabPlane .paginationWraper .submit {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height: 25px;
+    width: 60px;
+}
+.userIndexMessage .container .userIndex .rightCol .tabPlane .paginationWraper .pagination li a.active {
+    background: #2c84cc none repeat scroll 0 0;
+}
+/*统一分页结束*/
+
+/*项目信息结束---------------------------------------------------------------*/
+
+
+/*专家信息开始---------------------------------------------------------------*/
+.userIndexMessage .container .userIndex .rightCol .expertMessage{
+    padding:15px;
+
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage > h1{
+    font-size:20px;
+    margin:0;
+}
+
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab{
+    width:100%;
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabBtnGro{
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabBtnGro .tabBtn{
+    float:left;
+    width:100px;
+    cursor:pointer;
+    color:#2c84cc;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    position:relative;
+    font-size:14px;
+    background-repeat:no-repeat;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabBtnGro .tabBtn.active::before{
+    content:'';
+    background-image:url("../images/formTipArrowUp02.png");
+    background-repeat:no-repeat;
+    background-position:center 26px;
+    display:block;
+    height:50px;
+    left:3px;
+    position:absolute;
+    width:90px;
+    z-index:6;
+    background-size:28% auto;
+    bottom:-13.5px;
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabBtnGro .tabBtn:first-child{
+    background-color:#fff;
+    color:black;
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane{
+    padding:20px;
+    padding-top:10px;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ctrlBar{
+    font-size:12px;
+    margin-top:10px;
+
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ctrlBar a{
+    color:#2c84cc !important;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ctrlBar .markReaded{
+
+}
+
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ctrlBar .markClear{
+
+}
+
+/*项目消息，未读消息*/
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .unReadEmailList{
+    margin-left:-10px;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .unReadEmailList .emailListItems{
+    height:40px;
+    border-bottom:1px solid #ccc;
+    line-height:40px;
+    padding-left:5px;
+    position:relative;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .unReadEmailList .emailListItems .time{
+    color:#2c84cc;
+    position:absolute;
+    right:0;
+
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .unReadEmailList .emailListItems .fa-envelope{
+    color:#2c84cc;
+}
+
+/*项目消息，已读消息*/
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ReadedEmailList{
+    margin-left:-10px;
+    margin-top:10px;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ReadedEmailList .emailListItems{
+    height:40px;
+    border-bottom:1px solid #ccc;
+    line-height:40px;
+    padding-left:5px;
+    position:relative;
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ReadedEmailList .emailListItems .time{
+    color:#2c84cc;
+    position:absolute;
+    right:0;
+
+}
+.userIndexMessage .container .userIndex .rightCol .expertMessage .expertMessageTab .tabPlane .ReadedEmailList .emailListItems .fa-envelope{
+    color:#2c84cc;
+}
+
+/*专家信息结束---------------------------------------------------------------*/
+
+
+/*用户主页账号管理页*/
+.userIndexAccount .container .page-header {
+    width: 100%;
+}
+.userIndexAccount .container .userIndex {
+    margin-top:20px;
+    padding-bottom: 50px;
+}
+
+.userIndexAccount .container .userIndex .leftCol{
+    float:left;
+    width:18%;
+    border:1px solid #ccc;
+    border-radius:3px;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+    margin-left:-15px;
+
+}
+.userIndexAccount .container .userIndex .leftCol .userMenuList{
+    margin-bottom:0;
+
+}
+.userIndexAccount .container .userIndex .leftCol .userMenuList .userMenuListIetms{
+    font-size:13px;
+    border-bottom:1px solid #ccc;
+
+}
+
+.userIndexAccount .container .userIndex .leftCol .userMenuList .userMenuListIetms a{
+    display:block;
+    padding:10px 10px 10px 15px;
+    color:#2c84cc !important;
+}
+
+.userIndexAccount .container .userIndex .leftCol .userMenuList .userMenuListIetms a:hover{
+    background:#2e9ceb;
+    color:white !important;
+}
+
+.userIndexAccount .container .userIndex .leftCol .userMenuList .userMenuListIetms a.active{
+    color:#000 !important;
+
+}
+
+.userIndexAccount .container .userIndex .leftCol .userMenuList .userMenuListIetms:last-child{
+
+    border-bottom:none;
+}
+.userIndexAccount .container .userIndex .rightCol{
+    float:right;
+    width:82%;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 5px #ccc;
+    background:white;
+
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut{
+    padding:15px;
+
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut > h1{
+    font-size:20px;
+    margin:0 0 20px;
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut {}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .nowAcconut{
+    font-size:15px;
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding{
+    border-bottom:1px solid #ccc;
+    padding-bottom:20px;
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding h2{
+    font-size:15px;
+    margin-bottom:20px;
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding span{
+    background: blue none repeat scroll 0 0;
+    border-radius: 3px;
+    color:#fff !important;
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin-right:10px;
+    padding-left: 23px;
+    text-align: center;
+    width:73px;
+    vertical-align:middle;
+    margin-left:30px;
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding span.weixinIcon{
+    background:#44b035 url("../images/weixin.png") no-repeat scroll center center / 34px 34px;
+    margin-left:0px;
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding span.qqIcon{
+    background:#436da6 url("../images/qq.png") no-repeat scroll center center / 34px 34px;}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding span.weiboIcon{
+    background:#389fd7 url("../images/weibo.png") no-repeat scroll center center / 34px 34px}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding a{}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .trilateralAcconutBinding a[href]:hover{
+    color:#2c84cc !important;
+}
+
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword{
+
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword h2{
+    font-size:15px;
+
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList {}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList .formListItems{
+    height:34px;
+    margin-bottom:10px;
+    position:relative;
+
+}
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList .formListItems label{
+    vertical-align:middle;
+    width:100px;
+    margin-right:10px;
+    text-align:right;
+    font-weight:lighter;
+
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList .formListItems .errorTip{
+    left:110px;
+    position:absolute;
+    width:auto;
+
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList .formListItems input{
+    width:210px;
+    display:inline;
+
+}
+
+.userIndexAccount .container .userIndex .rightCol .userAcconut .editPassword .formList button{
+    margin-left:111px;
+    width:100px;
+
+}

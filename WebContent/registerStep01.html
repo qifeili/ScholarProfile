@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>RegisterStop01</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!--ju-ui-->
+    <link href="css/jqui/jquery-ui.min.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/citySelect/cityLayout.css" type="text/css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style>
+        select{
+            padding-right:0 !important;
+        }
+
+
+    </style>
+</head>
+<body class="registerStep01 clearfix">
+
+<!-- Navigation -->
+<nav class="navbar mynav navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Big Dig</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="<!--collapse--> navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-life">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="companyList.html">领域</a>
+                </li>
+                <li>
+                    <a href="projectList.html">项目</a>
+                </li>
+                <li>
+                    <a href="">社区</a>
+                </li>
+
+                <!--搜索框开始-->
+                <li class="searchGroupWraper">
+                    <form action="">
+                        <div class="searchGroupClose">关闭</div>
+                        <div class="searchGroup">
+                            <div class="searchGroupCon clearfix">
+                                <input type="text" class="searchInput01 searchInput" placeholder="搜索..."/>
+                                <div class="searchInput02Wraper">
+                                    <input type="text" class="searchInput02 searchInput" value="项目需求"/>
+                                    <ul class="searchGroupMenu">
+                                        <li>领域专家</li>
+                                        <!--<li>领域专家</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="searchGroupSubmit">提交</button>
+
+                    </form>
+
+                </li>
+                <!--搜索框结束-->
+
+
+                <li class="floatLelt">
+                    <a href="" id="signBtn">登录</a>
+                </li>
+                <li class="floatLelt message">
+                    <a href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <ul class="messageList">
+                            <li class="title">提醒</li>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                        </ul>
+                    </a>
+                </li>
+                <li class="floatLelt">
+                    <a href="publishingProjectStep01.html">发布项目</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="stepNav clearfix">
+        <ul class="stepNavList clearfix">
+            <li class="stepNavListItem">1 <span>基本信息</span></li>
+            <li class="stepNavListItem">2 <span>个性化信息</span></li>
+        </ul>
+    </div>
+    <div class="registerCon">
+
+        <h1>欢迎注册!</h1>
+        <h2>请完善您的基本信息</h2>
+
+        <form action="registerStep02.html">
+            <ul class="formList">
+                <li class="formListItems clearfix">
+                    <input type="text" class="form-control realName" name="realName" placeholder="真实姓名">
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+                </li>
+                <li class="formListItems clearfix">
+                    <input type="text" class="form-control bornDate" name="birthday" id="bornDate" placeholder="出生日期"/>
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+
+                    <select class="form-control sex" name="sex">
+                        <option selected="selected">男</option>
+                        <option>女</option>
+                    </select>
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+                </li>
+                <li class="formListItems clearfix">
+                    <select class="form-control diploma" name="maxDegree">
+                        <option value="-选择学历-">最高学历</option>
+                        <option value="6">高中以下</option>
+                        <option value="0">高中</option>
+                        <option value="1">中专</option>
+                        <option value="2">大专</option>
+                        <option value="3">本科</option>
+                        <option value="4">硕士</option>
+                        <option value="5">博士及以上</option>
+                    </select>
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+                </li>
+                <li class="formListItems clearfix">
+                    <select class="form-control startWork" name="worklife">
+                        <option value="-选择工作年限-">选择工作年限</option>
+                        <option value="0">在读学生</option>
+                        <option value="1">应届毕业生</option>
+                        <option value="2">一年</option>
+                        <option value="3">两年</option>
+                        <option value="4">三年</option>
+                        <option value="5">四年</option>
+                        <option value="6">五年</option>
+                        <option value="7">六年</option>
+                        <option value="8">七年</option>
+                        <option value="9">八年</option>
+                        <option value="10">九年</option>
+                        <option value="11">十年</option>
+                        <option value="12">十一年</option>
+                        <option value="13">十二年</option>
+                        <option value="14">十三年</option>
+                        <option value="15">十四年</option>
+                        <option value="16">十五年</option>
+                        <option value="17">十六年</option>
+                        <option value="18">十七年</option>
+                        <option value="19">十八年</option>
+                        <option value="20">十九年</option>
+                        <option value="21">二十年</option>
+                        <option value="22">二十年-三十年</option>
+                        <option value="23">三十年-四十年</option>
+                        <option value="24">四十年以上</option>
+                    </select>
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+                </li>
+                <li class="formListItems clearfix">
+                    <input type="text" class="form-control workAdd" placeholder="工作地址" name="workPlace">
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+                </li>
+
+                <li class="formListItems clearfix">
+                    <input name="cityAddInput" id="start1" autocomplete="off" type="text" placeholder="请选择/输入城市名称"
+                           class="form-control city_input  inputFocus proCityQueryAll proCitySelAll" ov="请选择/输入城市名称">
+                    <label class="errorTip">
+                        <span class="errorText"></span>
+                        <span class="arrow"></span>
+                    </label>
+
+
+
+                </li>
+                <!--弹出省省市-->
+                <div class="provinceCityAll">
+                    <div class="tabs clearfix">
+                        <ul class="">
+                            <li><a href="javascript:" class="current" tb="hotCityAll">热门城市</a></li>
+                            <li><a href="javascript:" tb="provinceAll">省份</a></li>
+                            <li><a href="javascript:" tb="cityAll" id="cityAll">城市</a></li>
+                            <li><a href="javascript:" tb="countyAll" id="countyAll">区县</a></li>
+                        </ul>
+                    </div>
+                    <div class="con">
+                        <div class="hotCityAll invis">
+                            <div class="pre"><a></a></div>
+                            <div class="list">
+                                <ul>
+                                    <!-- 					<li><a href="javascript:"  class="current">南京</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="next"><a class="can"></a></div>
+                        </div>
+                        <div class="provinceAll invis">
+                            <div class="pre"><a></a></div>
+                            <div class="list">
+                                <ul>
+                                    <!-- 					<li><a href="javascript:"  class="current">江西省</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="next"><a class="can"></a></div>
+                        </div>
+                        <div class="cityAll invis">
+                            <div class="pre"><a></a></div>
+                            <div class="list">
+                                <ul>
+                                    <!-- 					<li><a href="javascript:"  class="current">南京</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="next"><a class="can"></a></div>
+                        </div>
+                        <div class="countyAll invis">
+                            <div class="pre"><a></a></div>
+                            <div class="list">
+                                <ul>
+                                </ul>
+                            </div>
+                            <div class="next"><a class="can"></a></div>
+                        </div>
+                    </div>
+                </div>
+            <button type="submit" class="btn btn-primary btn-block continue">继续</button>
+            <a href="#">跳过</a>
+            </ul>
+
+
+            <!--<select class="form-control bornDate">-->
+            <!--<option  selected = "selected">出生年月</option>-->
+            <!--<option>1990</option>-->
+            <!--<option>1991</option>-->
+            <!--<option>1992</option>-->
+            <!--<option>1993</option>-->
+            <!--</select>-->
+
+
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </div>
+</footer>
+
+<!-- /.container -->
+
+
+<!--<ul class="topBtnGroup">
+    <li><a href="">热点领域</a></li>
+    <li><a href="">名会领域</a></li>
+    <li>
+        <i></i>
+        <b></b>
+        <a href="javascript:;" id="topBtn">返回顶部</a>
+    </li>
+</ul>-->
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.datepicker-zh-CN.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_cn.js"></script>
+
+
+<script type="text/javascript" src="js/build/dist/echarts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/citySelect/public.js"></script>
+<script src="js/common.js"></script>
+<script src="js/plug.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
+
+<script>
+    $(function () {
+
+
+        $('#topBtn').toTop();
+
+        //应用动态search插件
+        $('#searchGroupWraper').dySearchBox({
+            closeWidth: "150",
+            openWdith: "272"
+        });
+
+        $("#bornDate").datepicker({
+            "option": "$.datepicker.regional['zh-HK']",
+            "changeMonth": true,			//显示下拉月份
+            //"changeYear":true,
+            "showWeek": true,
+//            "showButtonPanel":true,	//显示按钮面板
+//            "showButtonPanel":true,	//显示按钮面板
+            //"closeText":"Close",		//设置关闭按钮文字
+            //"disable":true,
+            //"numberOfMonths":3,		//显示个数
+//            'onSelect': function(dateText, instance) {	//选择日期触发事件
+//                $("#box").html(dateText);
+//            },
+            'dateFormat': 'yy-mm-dd',	//设置日期格式
+            inline: true,
+
+        });
+
+        //表单验证开始-------
+        var swich;
+
+        function valiRealName() {
+            var $Input = $('input[name = "realName"]');
+            var InputVal = $Input.val();
+            if (!InputVal) {
+                $Input.next('.errorTip').show()
+                $Input.next('.errorTip').find('.errorText').text('请输入真实姓名');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valibornDate() {
+            var $Input = $('input[name = "birthday"]');
+            var InputVal = $Input.val();
+            if (!InputVal) {
+                $Input.next('.errorTip').show()
+                $Input.next('.errorTip').find('.errorText').text('请输入出生年月');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valisexInput() {
+            var $Input = $('select[name = "sex"]');
+            var InputVal = $Input.val();
+            if (!InputVal) {
+                $Input.next('.errorTip').show();
+                $Input.next('.errorTip').find('.errorText').text('请输入性别');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valiDiplomaInput() {
+            var $Input = $('select[name = "maxDegree"]');
+            var InputVal = $Input.val();
+            if (InputVal == '-选择学历-') {
+                $Input.next('.errorTip').show()
+                $Input.next('.errorTip').find('.errorText').text('请选择最高学历');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valistartWorkInput() {
+            var $Input = $('select[name = "worklife"]');
+            var InputVal = $Input.val();
+            if (InputVal == '-选择工作年限-') {
+                $Input.next('.errorTip').show();
+                $Input.next('.errorTip').find('.errorText').text('请选择工作年限');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valiWorkAddInput() {
+            var $Input = $('input[name = "workPlace"]');
+            var InputVal = $Input.val();
+            if (!InputVal) {
+                $Input.next('.errorTip').show();
+                $Input.next('.errorTip').find('.errorText').text('请输入工作地址');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+        function valiCityAddInput() {
+            var $Input = $('input[name = "cityAddInput"]');
+            var InputVal = $Input.val();
+            if (!InputVal) {
+                $Input.next('.errorTip').show();
+                $Input.next('.errorTip').find('.errorText').text('请选择/输入城市名称');
+                return false;
+            } else {
+                $Input.next('.errorTip').hide();
+                return true;
+            }
+        }
+
+
+//         分别验证
+/*         $('input[name = "realNameInput"]').keyup(function () {
+         valiRealName();
+         });
+         $('input[name = "bornDateInput"]').keyup(function () {
+         valibornDate();
+         });
+         $('input[name = "bornDateInput"]').keyup(function () {
+         valisexInput();
+         });
+         $('select[name = "diplomaInput"]').change(function () {
+         valiDiplomaInput();
+         });
+         $('select[name = "startWorkInput"]').change(function () {
+         valistartWorkInput();
+         });
+         $('input[name = "workAddInput"]').keyup(function () {
+         valiWorkAddInput();
+         });
+         $('input[name = "cityAddInput"]').keyup(function () {
+         valiCityAddInput();
+         });*/
+
+        //隐藏全部提示
+        $(document).click(function () {
+            $('label[class="errorTip"]').hide();
+        });
+
+        //提交验证
+        $('button[type = "submit"]').click(function () {
+                    var valiFunArr = ['valiRealName', 'valibornDate', 'valisexInput', 'valiDiplomaInput', 'valistartWorkInput', 'valiWorkAddInput', 'valiCityAddInput'];
+                    swich = valiFunArr.join("()&") + "()";
+                    swich = eval(swich);
+                    if (!swich) {
+                        return false;
+                    }
+                }
+        );
+
+        //表单验证结束-------
+
+
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>publishingProjectStep04</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style>
+        select {
+            padding-right: 0 !important;
+        }
+    </style>
+</head>
+<body class="publishingProjectStep04 clearfix">
+
+<!-- Navigation -->
+<nav class="navbar mynav navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+            <a class="navbar-brand" href="index.html">Big Dig</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="<!--collapse--> navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-life">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="companyList.html">领域</a>
+                </li>
+                <li>
+                    <a href="projectList.html">项目</a>
+                </li>
+                <li>
+                    <a href="">社区</a>
+                </li>
+
+                <!--搜索框开始-->
+                <li class="searchGroupWraper">
+                    <form action="">
+                        <div class="searchGroupClose">关闭</div>
+                        <div class="searchGroup">
+                            <div class="searchGroupCon clearfix">
+                                <input type="text" class="searchInput01 searchInput" placeholder="搜索..."/>
+                                <div class="searchInput02Wraper">
+                                    <input type="text" class="searchInput02 searchInput" value="项目需求"/>
+                                    <ul class="searchGroupMenu">
+                                        <li>领域专家</li>
+                                        <!--<li>领域专家</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="searchGroupSubmit">提交</button>
+
+                    </form>
+
+                </li>
+                <!--搜索框结束-->
+
+
+
+                <li class="floatLelt">
+                    <a href="" id="signBtn">登录</a>
+                </li>
+                <li class="floatLelt message">
+                    <a href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <ul class="messageList">
+                            <li class="title">提醒</li>
+                            <a href=""><li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span></li></a>
+                            <a href=""><li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span></li></a>
+                            <a href=""><li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span></li></a>
+                        </ul>
+                    </a>
+                </li>
+                <li class="floatLelt">
+                    <a href="publishingProjectStep01.html" class="active">发布项目</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<!-- Page Content -->
+<div class="container">
+    <div class="stepNav clearfix">
+        <ul class="stepNavList clearfix">
+            <li class="stepNavListItem complete">1 <span>选择项目类型</span></li>
+            <li class="stepNavListItem complete">2 <span>描述项目需求</span></li>
+            <li class="stepNavListItem complete">3 <span>设置合同金额</span></li>
+            <li class="stepNavListItem complete">4 <span>预览并发布项目</span></li>
+        </ul>
+    </div>
+    <div class="registerCon">
+
+        <h1>预览</h1>
+        <!--<h2>Tell us a little about yourself so we can customize your site experience.</h2>-->
+        <table class="infoTable table-striped" width="100%" border="0">
+            <tr>
+                <td width="10%">发布时间：</td>
+                <td width="40%"> 2016-01-03</td>
+                <td width="10%">开发周期：</td>
+                <td width="40%"> 10-20天</td>
+            </tr>
+            <tr>
+                <td>竞标人数：</td>
+                <td>100</td>
+                <td>项目现处于：</td>
+                <td>服务商工作</td>
+            </tr>
+            <tr>
+                <td>项目预算：</td>
+                <td>约10000元</td>
+                <td>项目分类：</td>
+                <td>培训讲座</td>
+            </tr>
+        </table>
+        <div class="infoMain clearfix" id="infoMain">
+            <!-- 添加选项卡-->
+
+
+            <div class="tabBtnGro clearfix">
+                <div class="tabBtn">项目详情<i class="fa fa-info-circle"></i></div>
+                <div class="tabBtn">数据集<i class="fa fa-database"></i></div>
+            </div>
+            <div class="tabPlane">
+                <h1>项目背景</h1>
+
+                <p>
+                    <br/><br/><br/>
+                </p>
+
+                <h1>项目需求</h1>
+
+                <p>
+                    a)国内外已有的面向高血压、糖尿病等常见慢性病建模方法，以及个性化序列预测问题的机器学习方法和医疗行业应用情况的调研；<br/>
+                    b) 基于用户特征和离散时间点的个性化序列预测问题的建模和算法实现，和基于数值型和range(数据域)型序列的个性化预测算法的设计和实现；<br/>
+                    c) 研究面向干预情境（药物、运动、休息等）和复杂状态情境（心情、天气、经纬度等），以及不完备的情境信息对个性化序列预测的建模方法和算法实现；<br/>
+                    d) 以用户血压和血糖数据序列回归正常范围作为最优化的目标，提出有效的个性化干预情境的选择，辅助用户在坚持采用建议的干预措施后回归到健康状态。<br/>
+                </p>
+
+                <h1>项目预期目标</h1>
+
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+                <h1>项目提交成果</h1>
+
+                <p>
+                    程序员提交程序代码
+                </p>
+            </div>
+
+            <div class="tabPlane">
+                <h1>数据文件</h1>
+
+                <ul class="dataList">
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>train.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>test.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>object.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>latex公式排版.doc</li>
+                </ul>
+
+                <h1>文件描述</h1>
+                <h2><i class="fa fa-file-archive-o"></i>train.7z</h2>
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+                <h2><i class="fa fa-file-archive-o"></i>test.7z</h2>
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+
+                <h2><i class="fa fa-file-archive-o"></i>object.7z</h2>
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+
+                <h2><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</h2>
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+
+                <h2><i class="fa fa-file-archive-o"></i>latex公式排版.doc</h2>
+                <p>
+                    基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                </p>
+
+
+                <h1>数据字段描述</h1>
+
+                <h2><i class="fa fa-file-archive-o"></i>train.7z</h2>
+                <ul class="fieldsList">
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerA</span> - the text for answer
+                        option A
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerB</span> - the text for answer
+                        option B
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerC</span> - the text for answer
+                        option C
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerD</span> - the text for answer
+                        option D
+                    </li>
+                </ul>
+
+                <h2><i class="fa fa-file-archive-o"></i>test.7z</h2>
+                <ul class="fieldsList">
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerA</span> - the text for answer
+                        option A
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerB</span> - the text for answer
+                        option B
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerC</span> - the text for answer
+                        option C
+                    </li>
+                    <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerD</span> - the text for answer
+                        option D
+                    </li>
+                </ul>
+
+
+                <h1>附件</h1>
+
+                <ul class="dataList">
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>train.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>test.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>object.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</li>
+                    <li class="dataListItems"><i class="fa fa-file-archive-o"></i>latex公式排版.doc</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <p class="projectNav">
+            <input type="checkbox" name="" id=""/>我已阅读并同意<a href="#">《领带报服务协议》</a>、<a href="#">《领带报服务协议》</a>、<a href="#">《领带报服务协议》</a>、<a href="#">《领带报服务协议》</a>
+
+        <br>
+
+        <a href="publishingProjectStep03.html" class="prevStep" target="_self">上一步</a>
+        <button type="button" class="btn btn-primary ok">发布</button>
+
+        </p>
+
+
+    </div>
+
+
+
+</div>
+
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Copyright &copy; Your Website 2014</p>
+        </div>
+    </div>
+</footer>
+
+<!-- /.container -->
+
+
+<!--<ul class="topBtnGroup">
+    <li><a href="">热点领域</a></li>
+    <li><a href="">名会领域</a></li>
+    <li>
+        <i></i>
+        <b></b>
+        <a href="javascript:;" id="topBtn">返回顶部</a>
+    </li>
+</ul>-->
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_cn.js"></script>
+
+<script type="text/javascript" src="js/build/dist/echarts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/plug.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
+
+<script>
+    $(function () {
+
+
+        $('#topBtn').toTop();
+
+        //应用动态search插件
+        $('#searchGroupWraper').dySearchBox({
+            closeWidth:"150",
+            openWdith:"272"
+        })
+
+        //应用tab插件
+        $('#infoMain').projectInfoTabs();
+
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

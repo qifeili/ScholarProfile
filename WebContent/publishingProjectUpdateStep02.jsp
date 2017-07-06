@@ -1,0 +1,927 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>publishingProjectStep02</title>
+<link href="css/reset.css" rel="stylesheet">
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/modern-business.css" rel="stylesheet">
+
+<!-- Custom Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+<style>
+select {
+	padding-right: 0 !important;
+}
+</style>
+</head>
+<body class="publishingProjectStep02 clearfix">
+
+	<!-- Navigation -->
+	<nav class="navbar mynav navbar-inverse navbar-fixed-top"
+		role="navigation">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<!--<button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>-->
+				<a class="navbar-brand" href="/">Comwit</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="<!--collapse--> navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-life">
+
+					<li><a href="/">首页</a></li>
+					<li><a href="expertlist.do">专家</a></li>
+					<li><a href="projectlist.do">项目</a></li>
+					<li><a href="">社区</a></li>
+
+					<!--搜索框开始-->
+					<li class="searchGroupWraper">
+						<form action="<%=basePath%>searchprojectlist.do" id="dynamicSearch" method="post">
+							<div class="searchGroupClose">关闭</div>
+							<div class="searchGroup">
+								<div class="searchGroupCon clearfix">
+									<input type="text" class="searchInput01 searchInput" name="srcText"
+										placeholder="搜索..." />
+									<div class="searchInput02Wraper">
+										<input type="text" class="searchInput02 searchInput"
+											value="项目需求" />
+										<input type="hidden" class="searchInput03 searchInput" name="srcType" value="领域"/>
+										<ul class="searchGroupMenu">
+											<li>领域专家</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<button type="submit" class="searchGroupSubmit">提交</button>
+						</form>
+
+					</li>
+					<!--搜索框结束-->
+
+                <!--
+				<li class="floatLelt Account" id="logined">
+                    <a href="javascript:void();" id=""><i class="fa fa-user"></i></a>
+                        <ul class="AccountMenuList">
+                            <li class="AccountMenuListItem"><a href="userIndexReviews.do">我的关注</a></li>
+                            <li class="AccountMenuListItem"><a href="userIndexProject.do">我的项目</a></li>
+                            <li class="AccountMenuListItem"><a href="userIndexMessage.do">我的消息</a></li>
+                            <li class="AccountMenuListItem"><a href="userIndexAccount.do">账号管理</a></li>
+                            <li class="AccountMenuListItem"><a href="" id="toLogout">退出登陆</a></li>
+                        </ul>
+                </li>
+
+                <li class="floatLelt">
+                    <a href="" id="signBtn">登录</a>
+                </li>
+                -->
+					<li class="floatLelt message"><a href="#"> <i
+							class="fa fa-envelope-o"></i>
+							<ul class="messageList">
+								<li class="title">提醒</li>
+								<a href="">
+									<li class="messageListItem">Big Technical
+										Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span>
+								</li>
+								</a>
+								<a href="">
+									<li class="messageListItem">Big Technical
+										Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span>
+								</li>
+								</a>
+								<a href="">
+									<li class="messageListItem">Big Technical
+										Support—中国领先的服务众包平台,注册用户超过了1300万...<span class="time">12-03</span>
+								</li>
+								</a>
+							</ul>
+					</a></li>
+					<li class="floatLelt">
+					<a href="" id="toPublishProject" class="active">发布项目</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container -->
+	</nav>
+	<!-- Page Content -->
+	<div class="container">
+		<div class="stepNav clearfix">
+			<ul class="stepNavList clearfix">
+				<li class="stepNavListItem complete">1 <span>选择项目类型</span></li>
+				<li class="stepNavListItem complete">2 <span>描述项目需求</span></li>
+				<li class="stepNavListItem">3 <span>设置合同金额</span></li>
+				<li class="stepNavListItem">4 <span>预览并发布项目</span></li>
+			</ul>
+		</div>
+		<div class="registerCon">
+
+			<!--<h1>Welcome to Glassdoor!</h1>-->
+
+			<!--<h2>Tell us a little about yourself so we can customize your site experience.</h2>-->
+
+			<form id="pubStepForm02"
+				action="<%=basePath%>publishingProjectUpdateStep02.do" method="post" enctype="multipart/form-data">
+				<ul class="projectInfList">
+					<li class="projectInfListItem projectType"><label
+						class="textlabel">项目类型：</label> ${projectType}<a
+						href="<%=basePath%>publishingProjectUpdateProjectType.jsp"
+						class="edit">修改</a></li>
+					<li class="projectInfListItem projectArea clearfix"><label
+						class="textlabel">选择领域：</label> <!--<input type="text" class="form-control"/>-->
+						<div class="autoComplete" id="autoComplete">
+							<div class="autoComplete-downBtn" id="autoComplete-downBtn">下拉</div>
+							<input type="text" id="autoComplete-input" name="fieldName"
+								class="autoComplete-input form-control" autocomplete="off"
+								disableautocomplete placeholder='输入领域'  />
+								<label class = 'errorTip'><span class = 'arrow'></span>请选择领域</label>
+							<ul class="autoComplete-list" id="autoComplete-list">
+							</ul>
+						</div></li>
+					<li class="projectInfListItem projectTime clearfix"><label
+						class="textlabel">开发周期：</label> <select name="developmentCycle"
+						id="" class="form-control">
+							<option value="3">3天</option>
+							<option value="4">4天</option>
+							<option value="5">5天</option>
+							<option value="6">6天</option>
+							<option value="7">7天</option>
+							<option value="8">8天</option>
+							<option value="9">9天</option>
+							<option value="10">10天</option>
+							<option value="11">11天</option>
+							<option value="12">12天</option>
+							<option value="13">13天</option>
+							<option value="14">14天</option>
+							<option value="15">15天</option>
+							<option value="16">16天</option>
+							<option value="17">17天</option>
+							<option value="18">18天</option>
+							<option value="19">19天</option>
+							<option value="20">20天</option>
+							<option value="21">21天</option>
+							<option value="22">22天</option>
+							<option value="23">23天</option>
+							<option value="24">24天</option>
+							<option value="25">25天</option>
+							<option value="26">26天</option>
+							<option value="27">27天</option>
+							<option value="28">28天</option>
+							<option value="29">29天</option>
+							<option value="30" selected="selected">30天</option>
+					</select></li>
+					<li class="projectInfListItem projectTitle">
+						<h2 class="textlabel">项目标题：</h2> <input type="text"
+						class="form-control" placeholder="一句话描述您的需求，例如：xx公司客户模型的设计与实现"
+						name="title" />
+						<label class = 'errorTip'><span class = 'arrow'></span>请输入项目标题</label>
+					</li>
+
+					<li class="projectInfListItem addTitleList">
+						<h2 class="textlabel">项目详情：</h2> <!--<input type="text" class="form-control" placeholder="一句话描述您的需求，例如：xx公司客户模型的设计与实现"/>-->
+						<div class="addTagsWraper" id="addTagsWraper">
+							<i class="fa fa-info-circle infoBtn" id="infoBtn"></i>
+							<div class="infoExample" id="infoExample">
+								<h1>项目需求</h1>
+
+								<p>
+									a)国内外已有的面向高血压、糖尿病等常见慢性病建模方法，以及个性化序列预测问题的机器学习方法和医疗行业应用情况的调研；<br />
+									b)
+									基于用户特征和离散时间点的个性化序列预测问题的建模和算法实现，和基于数值型和range(数据域)型序列的个性化预测算法的设计和实现；<br />
+									c)
+									研究面向干预情境（药物、运动、休息等）和复杂状态情境（心情、天气、经纬度等），以及不完备的情境信息对个性化序列预测的建模方法和算法实现；<br />
+									d)
+									以用户血压和血糖数据序列回归正常范围作为最优化的目标，提出有效的个性化干预情境的选择，辅助用户在坚持采用建议的干预措施后回归到健康状态。<br />
+								</p>
+
+								<h1>项目预期目标</h1>
+
+								<p>
+									基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+								</p>
+
+								<h1>项目提交成果</h1>
+
+								<p>程序员提交程序代码</p>
+							</div>
+							<div class="TagsWraper clearfix">
+
+								<span class="addTasBtn" id="addTasBtn">+</span> <span
+									class='infoTip'>添加子标签，最多允许6个标签</span>
+								<!--标签名input-->
+								<input type="hidden" value="" name="tagsName">
+								<!--标签值名input-->
+								<!--标签值input-->
+								<input type="hidden" value="" name="tagsinfo">
+								<!--标签值input-->
+							</div>
+							<ul class="tagsFform" id="tagsFform">
+								<span class="tagsFformCloseBtn" id="tagsFformCloseBtn">+</span>
+								<li class="tagsFformItems clearfix"><label for="addUserTag">新建子标题</label>
+									<input type="text" class="addUserTag form-control"
+									id="addUserTag" name="noname">
+									<button type="button" id="addUserBtn"
+										class=" addUserBtn btn btn-primary" name="noname">添加</button>
+
+									<!--<input type="text">--></li>
+								<li class="tagsFformItems clearfix"><label for="addUserTag"
+									class="">常用子标题</label>
+									<ul class="AlwayTagssList">
+										<li class="AlwayTagssListItems" id="tag01">项目背景</li>
+										<li class="AlwayTagssListItems" id="tag02">项目需求</li>
+										<li class="AlwayTagssListItems" id="tag03">预期目标</li>
+										<li class="AlwayTagssListItems" id="tag04">材料提交</li>
+										<li class="AlwayTagssListItems" id="tag05">详细需求</li>
+										<li class="AlwayTagssListItems" id="tag06">验收标准</li>
+										<li class="AlwayTagssListItems" id="tag07">团队需求</li>
+										<li class="AlwayTagssListItems" id="tag08">其他需求</li>
+									</ul></li>
+							</ul>
+						</div>
+
+
+					</li>
+
+
+					<li class="projectInfListItem upLoadEnclosure clearfix"
+						id="upLoadEnclosure">
+						<h2 class="textlabel">上传附件</h2> <span class="addEnclosureBtn"
+						id="addEnclosureBtn">+</span> <span class='infoTip'>上传项目需求文档，项目设计文档等资料，支持pdf,doc.docx格式（可选项）</span>
+						<!--<ul id="upLoadEnclosureList" class="upLoadEnclosureList">--> <!--<li class="upLoadEnclosureListItems"><input type="file" value="选择文件" title="上传文件" name="" class="upLoadEnclosureInput" size="20">&nbsp;&nbsp;<i class="upLoadEnclosureDel">删除</i></li>-->
+						<!--</ul>-->
+					</li>
+
+					<li class="projectInfListItem upLoadDataSet clearfix"
+						id="upLoadDataSet">
+						<h2 class="textlabel">上传数据集</h2> <span class="addDataSetBtn"
+						id="addDataSetBtn">+</span> <span class='infoTip'>上传项目需要的数据集，并对数据文件和字段和做简单的描述（可选项）</span>
+
+						<ul id="upLoadDataSetList" class="upLoadDataSetList">
+
+							<!--标签名input-->
+							<input type="hidden" value="" name="upLoadDataSetFileDis">
+							<!--标签值名input-->
+							<!--标签值input-->
+							<input type="hidden" value="" name="upLoadDataSetFieldDis">
+							<!--标签值input-->
+
+
+							<!--<li class="upLoadDataSetListItems">
+                            <ul class="upLoadDataSetSubList">
+                                <li class="upLoadDataSetSubListItems upLoadDataSetInput">
+                                    <input type="file" value="选择文件" title="上传文件" name="" class="" size="20">&nbsp;&nbsp;<i class="upLoadDataSetDel">删除</i>
+                                </li>
+                                <li class="upLoadDataSetSubListItems upLoadDataSetFile">
+                                    <label for="">数据文件描述:</label>
+                                    <textarea name="" id="" class="form-control"></textarea>
+                                </li>
+                                <li class="upLoadDataSetSubListItems upLoadDataSetField">
+                                    <label for="">数据字段描述:</label>
+                                    <textarea name="" id="" class="form-control"></textarea>
+                                </li>
+                            </ul>
+                        </li>-->
+						</ul>
+
+					</li>
+
+					<li class="projectInfListItem projectNav"><a
+						href="publishingProjectStep01.html" class="prevStep"
+						target="_self">上一步</a> <!--                <a type="button" class="btn btn-primary" href="publishingProjectStep03.html"
+                                       target="_self">下一步&nbsp;></a>-->
+
+
+						<button type="submit" class="btn btn-primary">下一步</button></li>
+				</ul>
+			</form>
+
+		</div>
+
+		<input name="projectId" value="${projectId}" hidden="hidden"/>
+	</div>
+
+
+	<hr>
+
+	<!-- Footer -->
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">
+				<p>Copyright &copy; Your Website 2014</p>
+			</div>
+		</div>
+	</footer>
+
+	<!-- /.container -->
+
+
+	<!--<ul class="topBtnGroup">
+    <li><a href="">热点领域</a></li>
+    <li><a href="">名会领域</a></li>
+    <li>
+        <i></i>
+        <b></b>
+        <a href="javascript:;" id="topBtn">返回顶部</a>
+    </li>
+</ul>-->
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_cn.js"></script>
+
+<script type="text/javascript" src="js/build/dist/echarts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/plug.js"></script>
+<!-- js工具类 -->
+<script src="jsutils/util.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+	$('.carousel').carousel({
+		interval : 5000
+	//changes the speed
+	})
+</script>
+
+<script>
+	$(function() {
+
+		$('#topBtn').toTop();
+
+		//应用动态search插件
+		$('#searchGroupWraper').dySearchBox({
+			closeWidth : "150",
+			openWdith : "272"
+		})
+
+		//应用带下拉选项的自动完成搜索框插件
+		$('#autoComplete').autoCompleteSreachBox();
+
+		//隐藏显示添加标签框开始
+		$('#addTasBtn').click(function() {
+			$('#tagsFform').show();
+
+		});
+		$('#tagsFformCloseBtn').click(function() {
+			$('#tagsFform').hide();
+		});
+		//隐藏显示添加标签框结束
+
+		//    隐藏显示项目详情模板开始
+		$('#infoBtn').click(function(e) {
+			$('#infoExample').fadeToggle();
+			e.stopPropagation();
+			$('body').click(function() {
+				$('#infoExample').fadeOut();
+			});
+			$('#infoExample').click(function(e) {
+				e.stopPropagation();
+			})
+		});
+		//    隐藏显示项目详情模板结束
+
+		//    添加标签开始
+
+		//创建字段输入textarea函数开始
+
+		function creatFiled(FiledName, id) {
+
+			var filed = "filed";
+
+			if ($('#TagInfoWraper').length < 1) {
+
+				$('#addTagsWraper').after('<div id="TagInfoWraper"></div>');
+			}
+
+			$('#TagInfoWraper')
+					.append(
+							$(
+									'<div class="TagInfo clearfix"><label class="TagInfoLabel">'
+											+ FiledName
+											+ '</label><textarea class="tagsInfo form-control" name="tagsInfo" id="" cols="" rows=""></textarea><label class="errorTip">请输入项目详情<span class="arrow"></span></label></div>')
+									.attr({
+										id : filed + id,
+									}));
+
+			//    项目详情标题排序
+			projectTitleorder();
+
+		}
+
+		//创建字段输入textarea函数结束
+
+		var $addTasBtn = $('#addTasBtn');
+		var filedName;
+
+		//    常用子标题输入开始
+		$('.AlwayTagssListItems').click(
+				function() {
+
+					if ($('.addedTag').length < 6) {
+
+						var $thisId = $(this).attr('id');
+
+						filedName = $(this).text();
+
+						$(this).addClass('active');
+
+						if ($("#add" + $thisId).length < 1) {
+							$addTasBtn.before($(
+									'<span>' + filedName
+											+ '<i>x</i></span>').addClass(
+									'addedTag').attr({
+								id : "add" + $thisId
+							}));
+							//        alert($('#addtag01'))
+
+							creatFiled(filedName, $thisId);
+						}
+
+					}
+
+				});
+		//    常用子标题输入结束
+
+		//    自定义子标题输入开始
+		$('#addUserBtn').click(
+				function() {
+
+					filedName = $('#addUserTag').val();
+
+					if ($('.addedTag').length < 6 && filedName) {
+
+						$addTasBtn.before($(
+								'<span>' + filedName + '<i>x</i></span>')
+								.addClass('addedTag'));
+
+						creatFiled(filedName);
+
+					}
+				});
+		//    自定义子标题输入结束
+
+		//    添加标签结束
+
+		//    项目详情标题排序函数开始
+		function projectTitleorder() {
+			var TagInfoLabelArr = [];
+
+			$('.addTitleList .TagInfo .TagInfoLabel').each(
+					function(index, element) {
+						TagInfoLabelArr.push($(element).text());
+
+						//        alert(typeof TagInfoLabelArr.toString())
+						$('input[name = "tagsName"]').val(
+								TagInfoLabelArr.join("@#￥%*&").toString());
+
+					})
+		}
+		//    项目详情标题排序函数结束
+
+		//    项目详情描述排序开始
+		function projectDisorder() {
+			var TagInfoTextArr = [];
+
+			$('.addTitleList .TagInfo .tagsInfo').each(
+					function(index, element) {
+						TagInfoTextArr.push($(element).val());
+
+						$('input[name = "tagsinfo"]').val(
+								TagInfoTextArr.join("@#￥%*&").toString());
+
+					})
+
+		}
+		//    项目详情描述排序结束
+
+		//附件名排序开始
+		function uploadEnorder() {
+			$('.upLoadEnclosureInput').each(function(index, element) {
+				$(element).attr({
+					//                name: "upLoadEnclosureInput" + index,
+					name : "upLoadEnclosureInput",
+				})
+			})
+		}
+		//附件名排序结束
+
+		//数据集名排序开始
+
+		function upLoadDataSetorder() {
+			//$('.upLoadDataSetInput input').each(function(index, element) {
+			$('.upLoadDataSetFileFirst input').each(function(index, element) {
+				$(element).attr({
+					//                name: "upLoadDataSetInput" + index,
+					name : "upLoadDataSetInput",
+				})
+			})
+		}
+		//数据集名排序结束
+
+		//    数据集文件描述排序开始
+		function upLoadDataSetFileDisorder() {
+			var upLoadDataSetFileDis = [];
+
+			$('.upLoadDataSetFile textarea').each(
+					function(index, element) {
+						upLoadDataSetFileDis.push($(element).val());
+
+						$('input[name = "upLoadDataSetFileDis"]').val(
+								upLoadDataSetFileDis.join("@#￥%*&")
+										.toString());
+
+					})
+
+		}
+		//    数据集文件描述排序结束
+
+		//    数据集字段描述排序开始
+		function upLoadDataSetFieldDisoror() {
+			var upLoadDataSetFieldDis = [];
+
+			$('.upLoadDataSetField textarea').each(
+					function(index, element) {
+						upLoadDataSetFieldDis.push($(element).val());
+
+						$('input[name = "upLoadDataSetFieldDis"]').val(
+								upLoadDataSetFieldDis.join("@#￥%*&")
+										.toString());
+
+					})
+		}
+		//    数据集字段描述排序结束
+
+		$('.addTitleList').delegate(".TagInfo .tagsInfo", "blur",
+				function() {
+					//项目描述排序
+					projectDisorder();
+				});
+
+		// 删除已添加的标签开始
+		$("#addTagsWraper").delegate(".addedTag i", "click", function() {
+
+			//项目详情标题排序
+			projectTitleorder();
+			//    项目详情描述排序
+			projectDisorder()
+
+			var $addedTag = $(this).parent();
+
+			var removeNum = $addedTag.index();
+
+			var currentID = $addedTag.attr('id');
+			if (currentID) {
+				$('#' + currentID.substring(3)).removeClass('active');
+			}
+			//删除本标签
+			$addedTag.remove();
+			//删除对应字段输入框
+			$('#TagInfoWraper .TagInfo').eq(removeNum).remove();
+
+		});
+		// 删除已添加的标签结束
+
+		$('.upLoadDataSetList').delegate(".upLoadDataSetFile textarea",
+				"blur", function() {
+
+					//    数据文件描述排序
+					upLoadDataSetFileDisorder()
+
+				});
+
+		$('.upLoadDataSetList').delegate(".upLoadDataSetField textarea",
+				"blur", function() {
+					//    数据字段描述排序
+					upLoadDataSetFieldDisoror()
+
+				});
+
+		//    上传附件和数据集文件函数开始
+		function uploadEncAndDataSet(switchBtn) {
+			if (switchBtn == 1) {
+
+				if ($('#upLoadEnclosureList').length < 1) {
+
+					$('#upLoadEnclosure')
+							.append(
+									'<ul class="upLoadEnclosureList" id="upLoadEnclosureList"></ul>');
+				}
+
+				$('#upLoadEnclosureList')
+						.append(
+								$('<li class="upLoadEnclosureListItems"><input class="upLoadEnclosureInput" name="" title="上传文件" value="选择文件" type="file"><label class="errorTip" style="display: none;">请选择上传附件<span class="arrow"></span></label>&nbsp;&nbsp;<i class="upLoadEnclosureDel">删除</i></li>'));
+
+				//数据附件名排序
+				uploadEnorder();
+
+			} else if (switchBtn == 2) {
+
+				if ($('#upLoadDataSetList').length < 1) {
+
+					$('#upLoadDataSet')
+							.append(
+									'<ul class="upLoadDataSetList" id="upLoadDataSetList"></ul>');
+
+				}
+
+				$('#upLoadDataSetList')
+						.append(
+								$('<li class="upLoadDataSetListItems">\
+                   <ul class="upLoadDataSetSubList">\
+                   <li class="upLoadDataSetSubListItems upLoadDataSetFileFirst">\
+                   <input type="file" value="选择文件" title="上传文件" name="" class="upLoadDataSetInput" size="20"><label class="errorTip" style="display: none;">请选择上传文件<span class="arrow"></span></label>&nbsp;&nbsp;<i class="upLoadDataSetDel">删除</i>\
+           </li>\
+           <li class="upLoadDataSetSubListItems upLoadDataSetFile">\
+                   <label for="">数据文件描述:</label>\
+           <textarea name="" id="" class="form-control upLoadDataSetFileInput"></textarea><label class="errorTip" style="display: none;"><span class="arrow"></span>请选择数据文件描述</label>\
+       </li>\
+           <li class="upLoadDataSetSubListItems upLoadDataSetField">\
+               <label for="">数据字段描述:</label>\
+               <textarea name="" id="" class="form-control upLoadDataSetFieldInput" placeholder="字段A - 字段A描述,字段B - 字段B描述,字段C - 字段C描述,字段D - 字段D描述"></textarea><label class="errorTip" style="display: none;"><span class="arrow"></span>请选择数据字段描述</label>\
+           </li>\
+       </ul>\
+       </li>'));
+
+				//数据集名排序
+				upLoadDataSetorder();
+			}
+
+		}
+		//    上传附件和数据集文件函数结束
+
+		//    上传附件和数据集文件开始
+		$('#addEnclosureBtn,#addDataSetBtn').click(function() {
+
+			var switchBtn;
+			if ($(this).attr('id') == "addEnclosureBtn") {
+				switchBtn = 1;
+			} else if ($(this).attr('id') == "addDataSetBtn") {
+				switchBtn = 2;
+			}
+			uploadEncAndDataSet(switchBtn);
+		});
+		//    上传附件和数据集文件结束
+
+		//删除附件
+		$('#upLoadEnclosure').delegate(".upLoadEnclosureDel", 'click',
+				function() {
+					$(this).parent().remove();
+					//数据附件名排序
+					uploadEnorder();
+				});
+
+		//删除数据集开始
+		$('#upLoadDataSet').delegate(".upLoadDataSetDel", 'click',
+				function() {
+
+					$(this).parent().parent().parent().remove();
+					//数据集名排序
+					upLoadDataSetorder();
+					//数据文件描述排序
+					upLoadDataSetFileDisorder();
+					//    数据字段描述排序
+					upLoadDataSetFieldDisoror();
+
+				});
+		//删除数据集结束
+
+		//表单验证开始
+
+		var swich;
+		//swich数组
+		var totalSwichArr = [];
+
+		//固定表单
+		function valiAutoCompleteInput() {
+			var Input = $('input[name = "fieldName"]');
+			var InputVal = Input.val();
+			if (!InputVal) {
+				Input.next('.errorTip').show();
+				swich = false;
+			} else {
+				Input.next('.errorTip').hide();
+				swich = true;
+			}
+
+			totalSwichArr[0] = swich;
+
+		}
+
+		function valiProjectTitle() {
+			var Input = $('input[name = "title"]');
+			var InputVal = Input.val();
+			if (!InputVal) {
+				Input.next('.errorTip').show();
+				swich = false;
+			} else {
+				Input.next('.errorTip').hide();
+				swich = true;
+			}
+
+			totalSwichArr[1] = swich;
+
+		}
+
+		//动态表单
+		function valiTagsInfo() {
+			$('textarea[class ~= "tagsInfo"]').each(
+					function(index, element) {
+						if ($(element).val() == "") {
+							$(element).next('.errorTip').show();
+						} else {
+							$(element).next('.errorTip').hide();
+							swich = true;
+						}
+					}).each(function(index, element) {
+				if ($(element).val() == "") {
+					swich = false;
+				}
+			});
+
+			totalSwichArr[2] = swich;
+
+		}
+
+		function valiupLoadEnclosureInputInfo() {
+			$('input[class ~= "upLoadEnclosureInput"]').each(
+					function(index, element) {
+						if ($(element).val() == "") {
+							$(element).next('.errorTip').show();
+						} else {
+							$(element).next('.errorTip').hide();
+							swich = true;
+						}
+					}).each(function(index, element) {
+				if ($(element).val() == "") {
+					swich = false;
+				}
+			});
+
+			totalSwichArr[3] = swich;
+
+		}
+
+		function valiLoadDataSetInputInfo() {
+			$('input[class ~= "upLoadDataSetInput"]').each(
+					function(index, element) {
+						if ($(element).val() == "") {
+							$(element).next('.errorTip').show();
+						} else {
+							$(element).next('.errorTip').hide();
+							swich = true;
+						}
+					}).each(function(index, element) {
+				if ($(element).val() == "") {
+					swich = false;
+				}
+			});
+
+			totalSwichArr[4] = swich;
+
+		}
+
+		function valiupLoadDataSetFileInput() {
+			$('textarea[class ~= "upLoadDataSetFileInput"]').each(
+					function(index, element) {
+						if ($(element).val() == "") {
+							$(element).next('.errorTip').show();
+						} else {
+							$(element).next('.errorTip').hide();
+							swich = true;
+						}
+					}).each(function(index, element) {
+				if ($(element).val() == "") {
+					swich = false;
+				}
+			})
+
+			totalSwichArr[5] = swich;
+
+		}
+
+		function valiupLoadDataSetFieldInput() {
+			$('textarea[class ~= "upLoadDataSetFieldInput"]').each(
+					function(index, element) {
+						if ($(element).val() == "") {
+							$(element).next('.errorTip').show();
+						} else {
+							$(element).next('.errorTip').hide();
+							swich = true;
+						}
+					}).each(function(index, element) {
+				if ($(element).val() == "") {
+					swich = false;
+				}
+			})
+
+			totalSwichArr[7] = swich;
+
+		}
+
+		$(document).click(function() {
+			$('label[class="errorTip"]').hide();
+		});
+
+		$('button[type = "submit"]').click(
+				function(e) {
+
+					var valiFunArr = [ 'valiAutoCompleteInput',
+							'valiProjectTitle', 'valiTagsInfo',
+							'valiupLoadEnclosureInputInfo',
+							'valiLoadDataSetInputInfo',
+							'valiupLoadDataSetFileInput',
+							'valiupLoadDataSetFieldInput' ];
+
+					eval(valiFunArr.join("()&") + "()");
+					totalSwich = eval(totalSwichArr.join("&"));
+
+					if (!totalSwich) {
+						return false;
+					}
+				});
+
+	});
+
+	//表单验证结束
+</script>
+	
+<!-- 验证是否session过期登录 -->
+<%-- <script type="text/javascript">
+$(function() {
+
+    var userInfoId = '<%=session.getAttribute("userInfoId")%>';
+    var projectId = '<%=session.getAttribute("projectId")%>';
+    if(userInfoId == "null") { //当session中没有值时， js获取到的是"null"，而不是null
+        $('#signBtn').click();           
+    }
+    if(projectId == "null") {
+        //alert("发布项目等待时间太久，请重新发布");
+        $().sessionExpiredDia();
+    }
+    return false;//必须加上这句阻止掉浏览器的默认动作
+});
+
+</script> --%>
+<!-- 发布项目验证是否登录 -->
+<script type="text/javascript">
+$(function() {
+    var userInfoId = '<%=session.getAttribute("userInfoId")%>';
+    //切换登录显示
+    if(userInfoId == "null" || userInfoId === null) {
+        //$('#logined').hide();
+        //$('#logouted').show();
+    	addLoginBtn();
+    }else {
+        //$('#logined').show();
+        //$('#logouted').hide();
+    	addLoginLogo();
+    }
+});
+
+</script>
+</body>
+
+</html>

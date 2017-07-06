@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>projectInfo</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style>
+        select{
+            padding-right:0 !important;
+        }
+
+        br{
+            /*margin-bottom:5px;*/
+        }
+    </style>
+</head>
+<body class="projectInfo clearfix">
+
+<!-- Navigation -->
+<nav class="navbar mynav navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>-->
+            <a class="navbar-brand" href="index.html">Big Dig</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="<!--collapse--> navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-life">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="companyList.html">领域</a>
+                </li>
+                <li>
+                    <a href="projectList.html" class="active">项目</a>
+                </li>
+                <li>
+                    <a href="">社区</a>
+                </li>
+
+                <!--搜索框开始-->
+                <li class="searchGroupWraper">
+                    <form action="">
+                        <div class="searchGroupClose">关闭</div>
+                        <div class="searchGroup">
+                            <div class="searchGroupCon clearfix">
+                                <input type="text" class="searchInput01 searchInput" placeholder="搜索..."/>
+                                <div class="searchInput02Wraper">
+                                    <input type="text" class="searchInput02 searchInput" value="项目需求"/>
+                                    <ul class="searchGroupMenu">
+                                        <li>领域专家</li>
+                                        <!--<li>领域专家</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="searchGroupSubmit">提交</button>
+
+                    </form>
+
+                </li>
+                <!--搜索框结束-->
+
+
+                <li class="floatLelt">
+                    <a href="" id="signBtn">登录</a>
+                </li>
+                <li class="floatLelt message">
+                    <a href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <ul class="messageList">
+                            <li class="title">提醒</li>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                        </ul>
+                    </a>
+                </li>
+                <li class="floatLelt">
+                    <a href="publishingProjectStep01.html">发布项目</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- Page Content -->
+
+<!--<header class="banner">
+    <h1>搜你所需</h1>
+        <form action="">
+            <div class="srcBox clearfix">
+                <select name="" id="srcType" class="srcType form-control">
+                    <option value="">领域</option>
+                    <option value="">研究者</option>
+                    <option value="">组织机构</option>
+                    <option value="">4</option>
+                </select>
+                <input type="text" class="srcText form-control" id="srcText" placeholder="请输入领域关键字" />
+                &lt;!&ndash;<input type="submit" value="" class="srcSub"/>&ndash;&gt;
+                <button type="submit" class="srcSub"><i class="fa fa-search"></i>
+                </button>
+            </div>
+        </form>
+</header>-->
+
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="clearfix">
+        <div id="" class="leftCol">
+
+            <!--<div class="projectInfoCon">-->
+            <div class="projectInfoTitle">
+                <img src="images/blurred1.jpg" alt="" class="blurred"/>
+
+                <div class="companyWiew clearfix">
+                    <img src="images/ihealthIcon.jpg" alt="" class="companyLogo"/>
+
+                    <div class="companyUrl">
+                        <h1>针对医疗数据的预测模型的设计与实现</h1>
+
+                        <p>iHealth</p>
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <!--<button class="review"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add a Review</button>-->
+                </div>
+
+            </div>
+
+            <div class="progressBarWraper clearfix">
+                <ul class="progressBarBgList">
+                    <li class="progressBarBgItem"></li>
+                    <li class="progressBarBgItem"></li>
+                    <li class="progressBarBgItem now"></li>
+                    <li class="progressBarBgItem future"></li>
+                </ul>
+                <ul class="progressBarvList clearfix">
+                    <li class="progressBarListItem  fa fa-check"><span>匹配服务商</span></li>
+                    <li class="progressBarListItem  fa fa-check"><span>选择服务商，签约</span></li>
+                    <li class="progressBarListItem now"><span>服务商工作</span></li>
+                    <li class="progressBarListItem future"><span>验收工作，满意后付款</span></li>
+                </ul>
+            </div>
+
+            <div class="projectInfoMain clearfix" id="projectInfoMain">
+                <!-- 添加选项卡-->
+
+
+                <div class="tabBtnGro clearfix">
+                    <div class="tabBtn">项目详情<i class="fa fa-info-circle"></i></div>
+                    <div class="tabBtn">数据集<i class="fa fa-database"></i></div>
+                </div>
+                <div class="tabPlane">
+                    <h1>项目背景</h1>
+
+                    <p>
+                        <br/><br/><br/>
+                    </p>
+
+                    <h1>项目需求</h1>
+
+                    <p>
+                        a)国内外已有的面向高血压、糖尿病等常见慢性病建模方法，以及个性化序列预测问题的机器学习方法和医疗行业应用情况的调研；<br/>
+                        b) 基于用户特征和离散时间点的个性化序列预测问题的建模和算法实现，和基于数值型和range(数据域)型序列的个性化预测算法的设计和实现；<br/>
+                        c) 研究面向干预情境（药物、运动、休息等）和复杂状态情境（心情、天气、经纬度等），以及不完备的情境信息对个性化序列预测的建模方法和算法实现；<br/>
+                        d) 以用户血压和血糖数据序列回归正常范围作为最优化的目标，提出有效的个性化干预情境的选择，辅助用户在坚持采用建议的干预措施后回归到健康状态。<br/>
+                    </p>
+
+                    <h1>项目预期目标</h1>
+
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+                    <h1>项目提交成果</h1>
+
+                    <p>
+                        程序员提交程序代码
+                    </p>
+                </div>
+
+                <div class="tabPlane">
+                    <h1>数据文件</h1>
+
+                    <ul class="dataList">
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>train.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>test.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>object.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>latex公式排版.doc</li>
+                    </ul>
+
+                    <h1>文件描述</h1>
+                    <h2><i class="fa fa-file-archive-o"></i>train.7z</h2>
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+                    <h2><i class="fa fa-file-archive-o"></i>test.7z</h2>
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+
+                    <h2><i class="fa fa-file-archive-o"></i>object.7z</h2>
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+
+                    <h2><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</h2>
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+
+                    <h2><i class="fa fa-file-archive-o"></i>latex公式排版.doc</h2>
+                    <p>
+                        基于上述针对医疗数据的预测模型设计，实现统一框架下的算法，能针对具体医疗数据中的用户特征、离散时间点、干预情境信息、复杂状态情境进行处理，实现个性化用户血压和糖尿数据序列的准确预测，并与用户后续上传的检测数据进行验证。同时针对用户历史的序列数据，提供最优化的策略给予用户，实现最大效果的辅助用户改善其高血压和糖尿病的状况。
+                    </p>
+
+
+                    <h1>数据字段描述</h1>
+
+                    <h2><i class="fa fa-file-archive-o"></i>train.7z</h2>
+                    <ul class="fieldsList">
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerA</span> - the text for answer
+                            option A
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerB</span> - the text for answer
+                            option B
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerC</span> - the text for answer
+                            option C
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerD</span> - the text for answer
+                            option D
+                        </li>
+                    </ul>
+
+                    <h2><i class="fa fa-file-archive-o"></i>test.7z</h2>
+                    <ul class="fieldsList">
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerA</span> - the text for answer
+                            option A
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerB</span> - the text for answer
+                            option B
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerC</span> - the text for answer
+                            option C
+                        </li>
+                        <li class="fieldsListItems"><i class="fa fa-tags"></i><span>answerD</span> - the text for answer
+                            option D
+                        </li>
+                    </ul>
+
+
+                    <h1>附件</h1>
+
+                    <ul class="dataList">
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>train.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>test.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>object.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>sampleSubmission.7z</li>
+                        <li class="dataListItems"><i class="fa fa-file-archive-o"></i>latex公式排版.doc</li>
+                    </ul>
+
+                </div>
+            </div>
+            <!--</div>-->
+
+        </div>
+        <div class="siderDis">
+
+            <div class="competitiveBidding clearfix">
+                <ul class="comList">
+                    <h1>基本信息</h1>
+                    <li class="comListItems"><span>发布时间：</span>2016-01-03</li>
+                    <li class="comListItems"><span>开发周期：</span>10-20天</li>
+                    <li class="comListItems"><span>竞标人数：</span>￥3,000-￥5,000</li>
+                    <li class="comListItems"><span>项目现处于：</span>服务商工作</li>
+                    <li class="comListItems"><span>项目预算：</span>约10000元</li>
+                    <li class="comListItems"><span>项目分类：</span>培训讲座</li>
+                </ul>
+                <button class="btn btn-primary" type="button">申请项目</button>
+                <!--<a  target="_self" href="publishingProjectStep03.html" type="button">下一步 ></a>-->
+            </div>
+
+            <div class="getEmail">
+                <form action="" class="clearfix">
+                    <h1>有类似项目时提醒我</h1>
+                    <button class="btn btn-primary" type="submit">订制</button>
+                    <input type="text" class="form-control" placeholder="输入接收提醒的邮箱"/>
+                    <!--<a  target="_self" href="publishingProjectStep03.html" type="button">下一步 ></a>-->
+                </form>
+            </div>
+
+
+            <div class="Recommend">
+                <h1>你可能感兴趣的领域/学者</h1>
+                <ul class="jobLikeList">
+
+                    <li class="jobLikeListItems clearfix">
+                        <img src="images/lcy.jpg" class="jobLikeimg" alt=""/>
+
+                        <p class="title"><a href="#">李春英</a></p>
+
+                        <p>服务计算、协同软件</p>
+                    </li>
+
+
+                    <li class="jobLikeListItems clearfix">
+                        <img src="images/fjx.png" class="jobLikeimg" alt=""/>
+
+                        <p class="title"><a href="#">方家轩</a></p>
+
+                        <p>信息服务、协同软件、移动互联网应用</p>
+                    </li>
+
+
+                    <li class="jobLikeListItems clearfix">
+                        <img src="images/zwq.jpg" class="jobLikeimg" alt=""/>
+
+                        <p class="title"><a href="#">曾伟铨</a></p>
+
+                        <p>大数据挖掘、网络与信息安全</p>
+                    </li>
+
+
+                    <li class="jobLikeListItems clearfix">
+                        <img src="images/cc.jpg" class="jobLikeimg" alt=""/>
+
+                        <p class="title"><a href="#">陈成</a></p>
+
+                        <p>商业智能、数据仓库</p>
+                    </li>
+
+
+                    <li class="jobLikeListItems clearfix">
+                        <img src="images/jobLikeimg.png" class="jobLikeimg" alt=""/>
+
+                        <p class="title"><a href="#">官全龙</a></p>
+
+                        <p>动安全、信息安全、网络安全、软件工程</p>
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <p>Copyright &copy; Your Website 2014</p>
+</footer>
+
+<!-- /.container -->
+
+
+<!--<ul class="topBtnGroup">
+    <li><a href="">热点领域</a></li>
+    <li><a href="">名会领域</a></li>
+    <li>
+        <i></i>
+        <b></b>
+        <a href="javascript:;" id="topBtn" >返回顶部</a>
+    </li>
+</ul>-->
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_cn.js"></script>
+
+
+<script type="text/javascript" src="js/build/dist/echarts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/plug.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
+
+<script>
+    $(function () {
+//
+//        $('#topBtn').toTop();
+//
+//
+//        //应用手风琴插件
+//        $('#acc').accordion();
+//
+//        //应用tab插件
+//        $('.tab').tabs();
+
+
+        $("a").get().hideFocus = "true";
+
+
+//        //banner搜索框开始
+//        $('#srcType').change(function () {
+//            var srcTextPlaArr = ["请输入领域关键字","请输入研究者姓名","请输入组织机构名",'4'];
+//            $('#srcText').attr({'placeholder':srcTextPlaArr[$(this).children('option:selected').index()]})
+//        });
+//        //banner搜索框结束
+//
+        //应用动态search插件
+        $('#searchGroupWraper').dySearchBox({
+            closeWidth: "150",
+            openWdith: "272"
+        })
+
+
+        //应用tab插件
+        $('#projectInfoMain').projectInfoTabs();
+
+
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

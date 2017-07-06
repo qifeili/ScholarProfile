@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>projectList</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <style>
+        select{
+            padding-right:0 !important;
+        }
+    </style>
+</head>
+<body class="projectList clearfix">
+
+<!-- Navigation -->
+<nav class="navbar mynav navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>-->
+            <a class="navbar-brand" href="index.html">Big Dig</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="<!--collapse--> navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-life">
+                <li>
+                    <a href="index.html">首页</a>
+                </li>
+                <li>
+                    <a href="companyList.html">领域</a>
+                </li>
+                <li>
+                    <a href="projectList.html" class="active">项目</a>
+                </li>
+                <li>
+                    <a href="">社区</a>
+                </li>
+
+                <!--搜索框开始-->
+                <li class="searchGroupWraper">
+                    <form action="">
+                        <div class="searchGroupClose">关闭</div>
+                        <div class="searchGroup">
+                            <div class="searchGroupCon clearfix">
+                                <input type="text" class="searchInput01 searchInput" placeholder="搜索..."/>
+
+                                <div class="searchInput02Wraper">
+                                    <input type="text" class="searchInput02 searchInput" value="项目需求"/>
+                                    <ul class="searchGroupMenu">
+                                        <li>领域专家</li>
+                                        <!--<li>领域专家</li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="searchGroupSubmit">提交</button>
+
+                    </form>
+
+                </li>
+                <!--搜索框结束-->
+
+
+                <li class="floatLelt">
+                    <a href="" id="signBtn">登录</a>
+                </li>
+                <li class="floatLelt message">
+                    <a href="#">
+                        <i class="fa fa-envelope-o"></i>
+                        <ul class="messageList">
+                            <li class="title">提醒</li>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                            <a href="">
+                                <li class="messageListItem">Big Technical Support—中国领先的服务众包平台,注册用户超过了1300万...<span
+                                        class="time">12-03</span></li>
+                            </a>
+                        </ul>
+                    </a>
+                </li>
+                <li class="floatLelt">
+                    <a href="publishingProjectStep01.html">发布项目</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- Page Content -->
+
+<header class="banner">
+
+
+    <div class="bannerinner clearfix">
+        <h1>搜你所需</h1>
+
+        <form action="" class="clearfix">
+            <ul class="srcBoxList clearfix">
+
+
+                <li class="clearfix srcBoxListOption srckeyWraper">
+                    <input type="text" class="srckey form-control" id="srckey" placeholder="请输入领域关键字"/>
+                    <!--<input type="submit" value="" class="srcSub"/>-->
+                    <button type="submit" class="srcSub"><i class="fa fa-search"></i>
+                    </button>
+                    <div class="supperSrcBtn"><i class="fa fa-chevron-down"></i>&nbsp;高级搜索</div>
+                    <!--<button type="submit" class="srcSub"><i class="fa fa-search"></i>-->
+                    <!--</button>-->
+                </li>
+
+                <li class="clearfix srcBoxListOption projectTypeWraper">
+                    <label class="srcBoxListOptionLabel">项目类型：</label>
+                    <label><input type="checkbox" name="projectTypeRadio" id=""/><i class="type01">培训讲座</i></label>
+                    <label><input type="checkbox" name="projectTypeRadio" id=""/><i class="type02">应用软件</i></label>
+                    <label><input type="checkbox" name="projectTypeRadio" id=""/><i class="type03">算法研究</i></label>
+                    <span class="srcTip">默认情况下搜索所有项目类型</span>
+                </li>
+
+
+                <!--autoComplete开始-->
+                <li class="clearfix srcBoxListOption projectTypeWraper">
+                    <label class="srcBoxListOptionLabel">项目领域：</label>
+
+                    <div class="autoComplete" id="autoComplete">
+                        <div class="autoComplete-downBtn" id="autoComplete-downBtn">下拉</div>
+                        <input type="text" id="autoComplete-input" class="autoComplete-input" autocomplete="off"
+                               disableautocomplete placeholder='输入领域'/>
+                        <ul class="autoComplete-list" id="autoComplete-list">
+                        </ul>
+                    </div>
+
+                </li>
+                <!--autoComplete结束-->
+
+
+                <li class="clearfix srcBoxListOption areaDesWraper">
+                    <span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span><span>大数据</span><span>图像识别</span>
+                </li>
+            </ul>
+            <button type="submit" class="srcSub"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索
+            </button>
+        </form>
+
+    </div>
+
+
+</header>
+
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <h4 class="page-header">
+        为你找到100+相关领域的项目
+    </h4>
+
+    <div class="clearfix">
+        <div id="" class="leftCol">
+            <ul class="projectListCon">
+
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+                <li class="projectListItem">
+                    <ul class="clearfix">
+                        <li class="projectListItem-column">
+                            <img src="images/jobLikeimg.png" class="companyLogo" alt=""/>
+
+                            <h1><a href="projectInfo.html">logo制作LOGO设计</a></h1>
+
+                            <h2>培训讲座</h2>
+
+                            <p>现已有logo设计，想做一个前台背后区域的logo...</p>
+                        </li>
+                        <li class="projectListItem-column">¥ 300.00</li>
+                        <li class="projectListItem-column"><i class="fa fa-heart"></i></li>
+                    </ul>
+                </li>
+            </ul>
+            <nav class="paginationWraper clearfix">
+                <form action="">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">&lt;上一页</span>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#" class="active">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页&gt;</span>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <!--&nbsp;&nbsp;共40页，到第&nbsp;<input type="text" class="justPage"/>&nbsp;页-->
+                    <!--<button type="submit" class="submit">确定</button>-->
+                </form>
+            </nav>
+        </div>
+        <div class="siderDis">
+            <h1>你可能感兴趣的领域/学者</h1>
+            <ul class="jobLikeList">
+
+                <li class="jobLikeListItems clearfix">
+                    <img src="images/lcy.jpg" class="jobLikeimg" alt=""/>
+
+                    <p class="title"><a href="#">李春英</a></p>
+
+                    <p>服务计算、协同软件</p>
+                </li>
+
+
+                <li class="jobLikeListItems clearfix">
+                    <img src="images/fjx.png" class="jobLikeimg" alt=""/>
+
+                    <p class="title"><a href="#">方家轩</a></p>
+
+                    <p>信息服务、协同软件、移动互联网应用</p>
+                </li>
+
+
+                <li class="jobLikeListItems clearfix">
+                    <img src="images/zwq.jpg" class="jobLikeimg" alt=""/>
+
+                    <p class="title"><a href="#">曾伟铨</a></p>
+
+                    <p>大数据挖掘、网络与信息安全</p>
+                </li>
+
+
+                <li class="jobLikeListItems clearfix">
+                    <img src="images/cc.jpg" class="jobLikeimg" alt=""/>
+
+                    <p class="title"><a href="#">陈成</a></p>
+
+                    <p>商业智能、数据仓库</p>
+                </li>
+
+
+                <li class="jobLikeListItems clearfix">
+                    <img src="images/jobLikeimg.png" class="jobLikeimg" alt=""/>
+
+                    <p class="title"><a href="#">官全龙</a></p>
+
+                    <p>动安全、信息安全、网络安全、软件工程</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+</div>
+
+<hr>
+
+<!-- Footer -->
+<footer>
+    <p>Copyright &copy; Your Website 2014</p>
+</footer>
+
+<!-- /.container -->
+
+
+<!--<ul class="topBtnGroup">
+    <li><a href="">热点领域</a></li>
+    <li><a href="">名会领域</a></li>
+    <li>
+        <i></i>
+        <b></b>
+        <a href="javascript:;" id="topBtn">返回顶部</a>
+    </li>
+</ul>-->
+
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/messages_cn.js"></script>
+
+<script type="text/javascript" src="js/build/dist/echarts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/plug.js"></script>
+
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
+
+<script>
+    $(function () {
+
+        $('#topBtn').toTop();
+
+
+        //应用手风琴插件
+        $('#acc').accordion();
+
+        //应用tab插件
+        $('.tab').tabs();
+
+
+        $("a").get().hideFocus = "true";
+
+
+        $('#searchGroupWraper').dySearchBox({
+            closeWidth: "150",
+            openWdith: "272"
+        })
+
+
+        //banner搜索框开始
+        $('#srcType').change(function () {
+            var srcTextPlaArr = ["请输入领域关键字", "请输入研究者姓名", "请输入组织机构名", '4'];
+            $('#srcText').attr({'placeholder': srcTextPlaArr[$(this).children('option:selected').index()]})
+        });
+        //banner搜索框结束
+
+
+        //应用带下拉选项的自动完成搜索框插件
+        $('#autoComplete').autoCompleteSreachBox();
+
+
+        $('.projectList .banner .srcBoxList .areaDesWraper span').click(function () {
+            $('.projectList .banner .srcBoxList .areaDesWraper span').css({"background": "#fff", "color": "#000",})
+            $(this).css({"background": "rgb(43, 161, 230)", "color": "#fff",})
+            $('#autoComplete-input').val($(this).text());
+        });
+
+
+        //高级搜索开始
+        var supperSrcBtnSwitch = 0;
+        $('.supperSrcBtn').click(function () {
+                    if (supperSrcBtnSwitch == 0) {
+                        $('.srcBoxList>li+li,.bannerinner form>.srcSub').css({"display": "block"});
+                        $('.srcBoxList .srcSub').hide();
+                        $('.supperSrcBtn i').css({"transform": "rotate(180deg)"});
+                        supperSrcBtnSwitch = 1;
+
+                    } else {
+                        $('.srcBoxList>li+li,.bannerinner form>.srcSub').hide();
+                        $('.srcBoxList .srcSub').show();
+                        $('.supperSrcBtn i').css({"transform": "rotate(0deg)"});
+                        supperSrcBtnSwitch = 0
+                    }
+
+                }
+                //高级搜索结束
+
+
+        )
+
+
+    })
+
+
+</script>
+
+
+</body>
+
+</html>

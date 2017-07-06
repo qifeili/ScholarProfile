@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>   
+       <!-- 此处可选，由于配置了自动扫描，此处不写任何代码也可以 -->
+      <!--  <mapping class="cn.scholarprofile.bean.User"/>  -->
+   </session-factory>
+    
+</hibernate-configuration>
